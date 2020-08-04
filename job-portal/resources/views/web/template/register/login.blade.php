@@ -133,6 +133,21 @@
                                         <!--<i class="icon-key"></i> -->
 
                                         <!--</div>-->
+                                        @if ($message = Session::get('msg'))
+                                            <div class="alert alert-success alert-block">
+                                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                                <strong>{{ $message }}</strong>
+                                            </div>
+                                        @endif
+                                        @if (count($errors) > 0)
+                                            <div class="alert alert-danger">
+                                                <ul>
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        @endif
                                         <form class="form-horizontal"  action="{{route('web.home.loginUser')}}" method="post" role="form">
                                             {{csrf_field()}}
                                             <div class="alert alert-danger vd_hidden">
@@ -244,7 +259,7 @@
                                 <div class="panel widget">
                                     <div class="panel-body">
                                         <h4 class="text-center font-semibold vd_grey">USER REGISTRATION</h4><div id="register-success" class="alert alert-success" style="display:none;"><i class="fa fa-exclamation-circle fa-fw"></i> Registration confirmation has been sent to your email </div>
-                                        @if ($message = Session::get('msg'))
+                                        @if ($message = Session::get('success'))
                                             <div class="alert alert-success alert-block">
                                                 <button type="button" class="close" data-dismiss="alert">×</button>
                                                 <strong>{{ $message }}</strong>
@@ -258,7 +273,8 @@
                                                     @endforeach
                                                 </ul>
                                             </div>
-                                        @endif <div id="register-passerror" class="alert alert-danger" style="display:none;"><i class="fa fa-exclamation-circle fa-fw"></i> Your password and Confirm password are not same </div>
+                                        @endif
+                                        <div id="register-passerror" class="alert alert-danger" style="display:none;"><i class="fa fa-exclamation-circle fa-fw"></i> Your password and Confirm password are not same </div>
                                         <form class="form-horizontal"  action="{{route('web.home.userRegister')}}" method="post" role="form" >
                                            {{csrf_field()}}
                                             <div class="alert alert-danger vd_hidden">
@@ -399,7 +415,7 @@
                                                     @endif
                                                 </div>
                                                 <div class="col-md-12 text-center mgbt-xs-5">
-                                                    <button class="btn vd_bg-green vd_white width-100" type="submit"   >Register</button>
+                                                    <button class="btn vd_bg-green vd_white width-100" type="submit"  >Register</button>
                                                 </div>
                                             </div>
                                         </form>

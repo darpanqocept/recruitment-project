@@ -16,4 +16,34 @@ class FreelancerController extends Controller
             return redirect()->route('web.home.loginDisplay');
         }
     }
+
+    public function networkPage()
+    {
+        return view('web.template.CRM.freelancer.network');
+    }
+
+    public function profilePage()
+    {
+        return view('web.template.CRM.freelancer.profile');
+    }
+
+    public function profileView()
+    {
+        return view('web.template.CRM.freelancer.view-profile');
+    }
+
+    public function myJob()
+    {
+        return view('web.template.CRM.freelancer.my-job');
+    }
+
+    public function allCandidates()
+    {
+        return view('web.template.CRM.freelancer.candidate');
+    }
+
+    public function myProjects()
+    {
+        return view('web.template.CRM.freelancer.project');
+    }
 }

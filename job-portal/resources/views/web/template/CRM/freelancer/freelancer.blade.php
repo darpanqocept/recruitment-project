@@ -1,4 +1,4 @@
-@include('web.template.CRM.include.header')
+@include('web.template.CRM.freelancer.include.header')
 
 
 <div class="vd_content-wrapper">
@@ -2411,4 +2411,4 @@
     </div>
     <!-- .vd_content-wrapper -->
 </div>
-@include('web.template.CRM.include.footer')
+@include('web.template.CRM.freelancer.include.footer')

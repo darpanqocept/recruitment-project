@@ -70,18 +70,22 @@ class HomeController extends Controller
         {
             if($user_type == 'Job-Seeker')
             {
+                Session::flash('msg','You Redirect On Job Seeker Dashboard');
                 return redirect()->route('web.job.index');
             }
             elseif($user_type == "Recruiter")
             {
+                Session::flash('msg','You Redirect On Recruiter Dashboard');
                return redirect()->route('web.recruiter.index');
             }
             else{
+                Session::flash('msg','You Redirect On Freelancer Dashboard');
                 return redirect()->route('web.freelancer.index');
             }
             return redirect()->route('web.home.index');
         }else
         {
+            Session::flash('danger','Please Check Your Credentials');
             return redirect()->route('web.home.loginDisplay');
         }
     }

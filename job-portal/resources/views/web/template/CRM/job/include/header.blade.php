@@ -1218,7 +1218,7 @@
                             </li>
 
                             <li>
-                                <a href="recDashBoard.php" >
+                                <a href="{{route('web.job.index')}}" >
                                     <span class="menu-icon"><i class="fa fa-dashboard"></i></span>
 
                                     <span class="menu-text">Dashboard</span>
@@ -1231,19 +1231,7 @@
                             </li>
 
                             <li>
-                                <a href="index.php" >
-                                    <span class="menu-icon"><i class="fa fa-users "></i></span>
-
-                                    <span class="menu-text">Network</span>
-
-
-                                </a>
-                                <div class="child-menu"  data-action="click-target">
-
-                                </div>
-                            </li>
-                            <li>
-                                <a href="EditProfile.php" >
+                                <a href="{{route('web.job.profilePage')}}" >
                                     <span class="menu-icon"><i class="fa fa-pencil"></i></span>
 
                                     <span class="menu-text">Edit Profile</span>
@@ -1255,7 +1243,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="ProfileForAll.php" >
+                                <a href="{{route('web.job.profileView')}}" >
                                     <span class="menu-icon"><i class="fa fa-eye"></i></span>
 
                                     <span class="menu-text">View Public Profile</span>
@@ -1268,7 +1256,7 @@
                             </li>
 
                             <li>
-                                <a href="PostedJob.php" >
+                                <a href="{{route('web.job.myJob')}}" >
                                     <span class="menu-icon"><i class="fa fa-briefcase   "></i></span>
 
                                     <span class="menu-text">My Job </span>
@@ -1279,34 +1267,9 @@
 
                                 </div>
                             </li>
-                            <li>
-                                <a href="Viewcandidate.php" >
-                                    <span class="menu-icon"><i class="fa fa-user   "></i></span>
-
-                                    <span class="menu-text">Candidates </span>
-
-
-                                </a>
-                                <div class="child-menu"  data-action="click-target">
-
-                                </div>
-                            </li>
-                            <li>
-                                <a href="projects.php" >
-                                    <span class="menu-icon"><i class="fa fa-folder-open-o   "></i></span>
-
-                                    <span class="menu-text">Projects </span>
-
-
-                                </a>
-                                <div class="child-menu"  data-action="click-target">
-
-                                </div>
-                            </li>
-
 
                             <li>
-                                <a href="searchjob.php" >
+                                <a href="{{route('web.job.searchJob')}}" >
                                     <span class="menu-icon"><i class="fa fa-search"></i></span>
 
                                     <span class="menu-text">Search</span>

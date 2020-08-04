@@ -1,6 +1,4 @@
-
-
-@include('web.template.CRM.include.header')
+@include('web.template.CRM.job.include.header')
 
 <div class="vd_content-wrapper">
     <div class="vd_container">
@@ -1429,36 +1427,26 @@
                                         <div >
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12">
-
+                                                    @if(isset($aPost))
+                                                    @foreach($aPost as $post)
                                                     <div class="tl-label panel widget light-widget panel-bd-left">
-                                                        <div class="panel-body"> <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="img/avatar/avatar-5.jpg">
-                                                            <h3 class="mgtp-10 mgbt-xs-5"> Rhonda William <em class="vd_soft-grey font-sm">via facebook</em> </h3>
+                                                        <div class="panel-body"> <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="{{url('web/crm/jobseeker/img/avatar/avatar-5.jpg')}}">
+                                                            <h3 class="mgtp-10 mgbt-xs-5"> {{Auth::user()->first_name}} {{Auth::user()->last_name}}<em class="vd_soft-grey font-sm">via facebook</em> </h3>
                                                             <span class="vd_soft-grey">1.30 pm  -  near <a href="#">Los Angeles</a> - <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-original-title="Shared Globally" class=""><i class="fa fa-globe"></i></a></span>
                                                             <div class="clearfix mgbt-xs-10"></div>
-                                                            <p class="mgbt-xs-20"> Hello <a href="#">Jason</a>, how are you, it's been a long time since we last met? I really miss you. And want to meet you soooooon.....</p>
+                                                            <p class="mgbt-xs-20"> Hello <a href="#">Jason</a>,{{$post->post}}</p>
                                                             <div class="tl-action"><a role="button" class="btn btn-sm mgr-10" href="javascript:void(0)"><i class="fa fa-thumbs-up fa-fw"></i> Like (10)</a> <a role="button" class="btn btn-sm btn-xs mgr-10" href="javascript:void(0)"><i class="fa fa-comment fa-fw"></i> Comment (2)</a> <a role="button" class="btn btn-sm " href="javascript:void(0)"><i class="fa fa-share fa-fw"></i> Share</a></div>
                                                             <hr class="mgtp-0"/>
                                                             <div class="comments">
                                                                 <div class="content-list content-image">
                                                                     <ul class="list-wrapper no-bd-btm">
                                                                         <li>
-                                                                            <div class="menu-icon"><img src="img/avatar/avatar.jpg" alt="example image"></div>
+                                                                            <div class="menu-icon"><img src="{{url('web/crm/jobseeker/img/avatar/avatar.jpg')}}" alt="example image"></div>
                                                                             <div class="menu-text"> Do you play or follow any sports?
                                                                                 <div class="menu-info"> <span class="menu-date">12 Minutes Ago </span> </div>
                                                                             </div>
                                                                         </li>
-                                                                        <li>
-                                                                            <div class="menu-icon"><img src="img/avatar/avatar-2.jpg" alt="example image"></div>
-                                                                            <div class="menu-text"> Good job mate !
-                                                                                <div class="menu-info"> <span class="menu-date">1 Hour 20 Minutes Ago </span> </div>
-                                                                            </div>
-                                                                        </li>
-                                                                        <li>
-                                                                            <div class="menu-icon"><img src="img/avatar/avatar.jpg" alt="example image"></div>
-                                                                            <div class="menu-text"> Do you play or follow any sports?
-                                                                                <div class="menu-info"> <span class="menu-date">12 Minutes Ago </span> </div>
-                                                                            </div>
-                                                                        </li>
+
                                                                     </ul>
                                                                 </div>
                                                                 <!-- content-list -->
@@ -1467,7 +1455,7 @@
                                                                     <div class="content-list content-image">
                                                                         <div class="list-wrapper">
                                                                             <div>
-                                                                                <div class="menu-icon"><img src="img/avatar/avatar-5.jpg" alt="example image"></div>
+                                                                                <div class="menu-icon"><img src="{{url('web/crm/jobseeker/img/avatar/avatar-5.jpg')}}" alt="example image"></div>
                                                                                 <div class="menu-text">
                                                                                     <textarea  rows="3" class="width-100" placeholder="Write a comment..."></textarea>
                                                                                 </div>
@@ -1481,8 +1469,9 @@
                                                         </div>
                                                         <!-- panel-body -->
                                                     </div>
-                                                    <!-- panel -->
 
+                                                    @endforeach
+                                                    @endif
                                                     <div class="tl-label panel widget light-widget panel-bd-left vd_bdl-red">
                                                         <div class="panel-body"> <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="img/avatar/avatar-5.jpg">
                                                             <h3 class="mgtp-10 mgbt-xs-5"> Rhonda William <em class="vd_soft-grey font-sm">@rhondawil</em> </h3>
@@ -4525,38 +4514,40 @@
 
 
                     <div >
+                        <form action="{{route('web.job.postFeed')}}" method="post">
+                            {{csrf_field()}}
                         <div class="child-menu">
 
-                            <textarea class="no-bd" rows="14" placeholder="What are you doing?" ></textarea>
+                            <textarea class="no-bd" rows="14" placeholder="What are you doing?" name="post" ></textarea>
                             <div class="vd_textarea-menu vd_bg-yellow vd_bd-yellow" >
-                                <input class="form-control" type="text" placeholder="#tags">
+                                <input class="form-control" type="text" placeholder="#tags" name="tags">
                                 <ul class="nav nav-pills ">
                                     <li class="one-icon">
                                         <a data-toggle="tab-post" href="javascript:void(0);">
-            <span class="menu-icon">
-              <i class="fa fa-user fa-fw"></i>
-            </span>
+                                        <span class="menu-icon">
+                                          <i class="fa fa-user fa-fw"></i>
+                                        </span>
                                         </a>
                                     </li>
                                     <li class="one-icon">
                                         <a data-toggle="tab-post" href="javascript:void(0);">
-            <span class="menu-icon">
-              <i class="fa fa-camera fa-fw"></i>
-            </span>
+                                        <span class="menu-icon">
+                                          <i class="fa fa-camera fa-fw"></i>
+                                        </span>
                                         </a>
                                     </li>
                                     <li class="one-icon">
                                         <a data-toggle="tab-post" href="javascript:void(0);">
-            <span class="menu-icon">
-              <i class="fa fa-smile-o fa-fw"></i>
-            </span>
+                                        <span class="menu-icon">
+                                          <i class="fa fa-smile-o fa-fw"></i>
+                                        </span>
                                         </a>
                                     </li>
                                     <li class="pull-right">
                                         <a data-toggle="tab-post" href="javascript:void(0);" style="border-left:1px solid rgba(255,255,255,.3)">
-            <span class="menu-icon">
-              <i class="fa fa-check fa-fw"></i>
-            </span>
+                                        <span class="menu-icon">
+                                          <i class="fa fa-check fa-fw"></i>
+                                        </span>
 
                                         </a>
                                     </li>
@@ -4568,6 +4559,11 @@
 
                             </div>
                         </div> <!-- child-menu -->
+                            <div class="modal-footer background-login">
+                                <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn vd_btn vd_bg-green">Post</button>
+                            </div>
+                        </form>
                     </div>
 
                     <script>
@@ -4969,10 +4965,7 @@
                           </form>
                          -->
                 </div>
-                <div class="modal-footer background-login">
-                    <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn vd_btn vd_bg-green">Post</button>
-                </div>
+
             </div>
             <!-- /.modal-content -->
         </div>
@@ -4983,4 +4976,4 @@
 
 </div>
 
-@include('web.template.CRM.include.footer')
+@include('web.template.CRM.job.include.footer')
