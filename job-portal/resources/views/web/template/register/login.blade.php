@@ -163,31 +163,13 @@
                                                     </div>
                                                     <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon"> <i class="fa fa-envelope"></i> </span>
                                                         <input type="email" placeholder="Email" id="email" name="email" class="required" required>
-                                                    </div>
-                                                   {{-- @if($errors->has('email'))
-                                                        <span class="error">{{$errors->first('email')}}</span>
-                                                    @endif--}}
-                                                    <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon">  </span>
-                                                        <select id="cars" class="required" style="background-color:gainsboro" name="user_type">
-                                                            <option value="">Select User Type</option>
-                                                            <option value="Job-Seeker">Job Seeker</option>
-                                                            <option value="Recruiter">Recruiter</option>
-                                                            <option value="Freelancer">Freelancer</option>
-                                                        </select>
-                                                    </div>
-                                                   {{-- @if($errors->has('user_type'))
-                                                        <span class="error">{{$errors->first('user_type')}}</span>
-                                                    @endif--}}
-
+                                                    </div> 
                                                     <div class="label-wrapper">
                                                         <label class="control-label sr-only" for="password">Password</label>
                                                     </div>
                                                     <div class="vd_input-wrapper" id="password-input-wrapper" > <span class="menu-icon"> <i class="fa fa-lock"></i> </span>
                                                         <input type="password" placeholder="Password" id="password" name="password" class="required"  required>
-                                                    </div>
-                                                    {{--@if($errors->has('password'))
-                                                        <span class="error">{{$errors->first('password')}}</span>
-                                                    @endif--}}
+                                                    </div>            
                                                 </div>
                                             </div>
                                             <div id="vd_login-error" class="alert alert-danger hidden"><i class="fa fa-exclamation-circle fa-fw"></i> Please fill the necessary field </div>

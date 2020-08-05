@@ -1,4 +1,5 @@
 @include('web.template.CRM.recruiter.include.header')
+<link rel="stylesheet" href="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.css">
 <div class="vd_content-wrapper">
    <div class="vd_container">
       <div class="vd_content clearfix">
@@ -69,15 +70,16 @@
                                     <div class="content-list content-image menu-action-right">
                                        <div  data-rel="scroll" data-scrollheight="550">
                                           <ul class="list-wrapper pd-lr-15">
-                                             <li class="tl-item">
-                                                <div class="tl-icon success"> <i class="fa fa-comments"></i> </div>
+                                            @if(count($postfeeddata)>0)
+                                               @foreach($postfeeddata as $upostfeeddata)
+                                             <li class="tl-item"> 
                                                 <div class="tl-label panel widget light-widget panel-bd-left">
                                                    <div class="panel-body">
                                                       <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="{{ asset('web/img/avatar/avatar-5.jpg') }}">
-                                                      <h3 class="mgtp-10 mgbt-xs-5"> Rhonda William <em class="vd_soft-grey font-sm">via facebook</em> </h3>
+                                                      <h3 class="mgtp-10 mgbt-xs-5"> {{  $upostfeeddata->first_name }} {{  $upostfeeddata->last_name }}<em class="vd_soft-grey font-sm">via facebook</em> </h3>
                                                       <span class="vd_soft-grey">1.30 pm  -  near <a href="#">Los Angeles</a> - <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-original-title="Shared Globally" class=""><i class="fa fa-globe"></i></a></span>
                                                       <div class="clearfix mgbt-xs-10"></div>
-                                                      <p class="mgbt-xs-20"> Hello <a href="#">Jason</a>, how are you, it's been a long time since we last met? I really miss you. And want to meet you soooooon.....</p>
+                                                      <p class="mgbt-xs-20"> {{  $upostfeeddata->description }}</p>
                                                       <div class="tl-action"><a role="button" class="btn btn-sm mgr-10" href="javascript:void(0)"><i class="fa fa-thumbs-up fa-fw"></i> Like (10)</a> <a role="button" class="btn btn-sm btn-xs mgr-10" href="javascript:void(0)"><i class="fa fa-comment fa-fw"></i> Comment (2)</a> <a role="button" class="btn btn-sm " href="javascript:void(0)"><i class="fa fa-share fa-fw"></i> Share</a></div>
                                                       <hr class="mgtp-0"/>
                                                       <div class="comments">
@@ -128,6 +130,8 @@
                                                 </div>
                                                 <!-- panel -->
                                              </li>
+                                              @endforeach
+                                              @endif
                                              <li class="tl-item">
                                                 <div class="tl-icon danger"> <i class="fa fa-picture-o"></i> </div>
                                                 <div class="tl-label panel widget light-widget panel-bd-left vd_bdl-red">
@@ -904,17 +908,22 @@
                </div>
                <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                   <div class="modal-dialog">
+                     <form name="postfeed" action="{!! route('web.recruiter.postFeed') !!}"
+                                        method="POST" enctype='multipart/form-data'>
+                       @csrf         
                      <div class="modal-content">
                         <div class="modal-header vd_bg-blue vd_white">
                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
                            <h4 class="modal-title" id="myModalLabel">Feed Post</h4>
                         </div>
                         <div class="modal-body">
-                           <div >
+                           <div>
+                           
+
                               <div class="child-menu">
-                                 <textarea class="no-bd" rows="10" placeholder="What are you doing?" ></textarea>
+                                 <textarea id="emogii" name="description" class="no-bd" rows="10" placeholder="What are you doing?" required ></textarea>
                                  <div class="vd_textarea-menu vd_bg-yellow vd_bd-yellow" >
-                                    <input class="form-control" type="text" placeholder="#tags">
+                                    <input class="form-control" name="hashtage" type="text" placeholder="#tags">
                                     <ul class="nav nav-pills ">
                                        <li class="one-icon">
                                           <a data-toggle="tab-post" href="javascript:void(0);">
@@ -930,14 +939,14 @@
                                           </span>
                                           </a>
                                        </li>
-                                       <li class="one-icon">
-                                          <a data-toggle="tab-post" href="javascript:void(0);">
+                                       <!-- <li class="one-icon">
+                                          <a data-toggle="tab-post" href="javascript:void(0);" >
                                           <span class="menu-icon">
                                           <i class="fa fa-smile-o fa-fw"></i>
                                           </span>
                                           </a>
-                                       </li>
-                                       <li class="pull-right">
+                                       </li> -->
+                                       <!-- <li class="pull-right">
                                           <a data-toggle="tab-post" href="javascript:void(0);" style="border-left:1px solid rgba(255,255,255,.3)">
                                           <span class="menu-icon">
                                           <i class="fa fa-check fa-fw"></i>
@@ -946,20 +955,23 @@
                                           Post
                                           </span>
                                           </a>
-                                       </li>
+                                       </li> -->
                                     </ul>
                                  </div>
                                  <div class="col-sm-12 controls">
                                  </div>
                               </div>
+                          
                               <!-- child-menu -->
                            </div>
                         </div>
                         <div class="modal-footer background-login">
                            <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn vd_btn vd_bg-green">Post</button>
                            <!--                           <button type="button" class="btn vd_btn vd_bg-green">Save changes</button> -->
                         </div>
                      </div>
+                 </form>
                      <!-- /.modal-content -->
                   </div>
                   <!-- /.modal-dialog -->
@@ -1953,4 +1965,13 @@
    </div>
    <!-- .vd_content-wrapper -->
 </div>
+
+
 @include('web.template.CRM.recruiter.include.footer')
+<script src="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.js"></script>
+<script>
+     $('#emogii').emojioneArea({
+   pickerPosition:"bottom",
+   toneStyle: "bullet"
+  });
+</script>

@@ -43,6 +43,7 @@ Route::match(['get','post'],'/recruiter/profile/view',['as'=>'web.recruiter.prof
 Route::match(['get','post'],'/recruiter/myjob',['as'=>'web.recruiter.my-job','uses'=>'Web\RecruiterController@myJob']);
 Route::match(['get','post'],'/recruiter/candidate',['as'=>'web.recruiter.allCandidates','uses'=>'Web\recruiterController@allCandidates']);
 Route::match(['get','post'],'/recruiter/project',['as'=>'web.recruiter.myProjects','uses'=>'Web\RecruiterController@myProjects']);
+Route::match(['get','post'],'/recruiter/project',['as'=>'web.recruiter.postFeed','uses'=>'Web\RecruiterController@addpostFeed']);
 /*Recruiter*/
 
 /*Freelancer*/
