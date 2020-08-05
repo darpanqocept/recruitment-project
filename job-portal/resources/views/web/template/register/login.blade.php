@@ -403,7 +403,7 @@
                                             <div class="form-group">
                                                 <div class="col-md-12 mgbt-xs-10 mgtp-20">
                                                     <div class="vd_checkbox">
-                                                        <input type="checkbox" id="checkbox-1" value="1">
+                                                        <input type="checkbox" id="checkbox-12" value="1">
                                                         <label for="checkbox-1"> Send me newsletter about the latest update</label>
                                                     </div>
                                                     <div class="vd_checkbox">

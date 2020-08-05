@@ -37,6 +37,12 @@ Route::match(['get','post'],'/jobseeker/post',['as'=>'web.job.postFeed','uses'=>
 
 /*Recruiter*/
 Route::match(['get','post'],'/recruiter',['as'=>'web.recruiter.index','uses'=>'Web\RecruiterController@index']);
+Route::match(['get','post'],'/recruiter/network',['as'=>'web.recruiter.network','uses'=>'Web\RecruiterController@networkPage']);
+Route::match(['get','post'],'/recruiter/profile',['as'=>'web.recruiter.profile','uses'=>'Web\RecruiterController@profilePage']);
+Route::match(['get','post'],'/recruiter/profile/view',['as'=>'web.recruiter.profile','uses'=>'Web\RecruiterController@profileView']);
+Route::match(['get','post'],'/recruiter/myjob',['as'=>'web.recruiter.my-job','uses'=>'Web\RecruiterController@myJob']);
+Route::match(['get','post'],'/recruiter/candidate',['as'=>'web.recruiter.allCandidates','uses'=>'Web\recruiterController@allCandidates']);
+Route::match(['get','post'],'/recruiter/project',['as'=>'web.recruiter.myProjects','uses'=>'Web\RecruiterController@myProjects']);
 /*Recruiter*/
 
 /*Freelancer*/

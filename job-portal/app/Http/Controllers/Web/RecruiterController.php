@@ -10,12 +10,45 @@ class RecruiterController extends Controller
 {
     public function index()
     {
-        if(Auth::user()) {
+        if(Auth::user()) 
+        {
             return view('web.template.CRM.recruiter.recruiter');
-            }
-        else{
+        }
+        else
+        {
             return redirect()->route('web.home.loginDisplay');
         }
-
     }
+
+        public function networkPage()
+	    {
+	        return view('web.template.CRM.recruiter.network');
+	    }
+
+	    public function profilePage()
+	    {
+	        return view('web.template.CRM.recruiter.profile');
+	    }
+
+	    public function profileView()
+	    {
+	        return view('web.template.CRM.recruiter.view-profile');
+	    }
+
+	    public function myJob()
+	    {
+	        return view('web.template.CRM.recruiter.my-job');
+	    }
+
+	    public function allCandidates()
+	    {
+	        return view('web.template.CRM.recruiter.candidate');
+	    }
+
+	    public function myProjects()
+	    {
+	        return view('web.template.CRM.recruiter.project');
+	    }
+
+    
 }
