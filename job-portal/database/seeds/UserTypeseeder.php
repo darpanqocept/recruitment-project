@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Models\UserType;
 
-class UserTypeseeder extends Seeder
+class UserTypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,16 +12,17 @@ class UserTypeseeder extends Seeder
      */
     public function run()
     {
-         DB::table('usertype')->insert([
-       		[
-       			'name' => 'Job seeker',
-       		],
-       		[
-       			'name' => 'Recruiter',
-       		],
-       		[
-       			'name' => 'Freelencer',
-       		]
-       		]);
+        DB::table('usertype')->insert([
+            [
+                'name' => 'Job seeker',
+            ],
+            [
+                'name' => 'Recruiter',
+            ],
+            [
+                'name' => 'Freelencer',
+            ]
+        ]);
     }
+
 }

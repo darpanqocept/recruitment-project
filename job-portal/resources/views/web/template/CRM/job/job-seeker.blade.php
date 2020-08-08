@@ -1,5 +1,5 @@
 @include('web.template.CRM.job.include.header')
-
+<link rel="stylesheet" href="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.css">
 <div class="vd_content-wrapper">
     <div class="vd_container">
         <div class="vd_content clearfix">
@@ -242,15 +242,15 @@
 
                                                                     </script>
                                                                     <div class="row-fluid" style="background-color:white;">
-
-
+                                                                        @if(isset($aUser))
+                                                                        @foreach($aUser as $user)
                                                                         <div class="col-md-6">
                                                                             <div class="my-list col-md-12">
                                                                                 <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
+                                                                                    <img src="{{url('images' . '/' . $user->image)}}" alt="dsadas" height="80px" width="80px" style="padding:0 " />
                                                                                 </div>
                                                                                 <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
+                                                                                    <h3 style=" font-size:  20px">&nbsp;{{$user->username}} </h3>
                                                                                     <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
                                                                                         <i class="fa fa-star" aria-hidden="true"></i>
                                                                                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -259,8 +259,8 @@
 
                                                                                         &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
                                                                                 </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
+                                                                                <h3>Experience <i style="text-align: right"> {{$user->total_exp}} month</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">{{$user->specialization_course}} </b>  </h3>
+                                                                                <span class="pull-left  ">Current : {{$user->company_name}} <br> Title : {{$user->current_designation}} <br>Education: {{$user->higher_qualification}}<br>Locations:{{$user->location}}.</span>
                                                                                 <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
 
 
@@ -278,399 +278,12 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
+                                                                            @endforeach
+                                                                            @endif
 
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
 
 
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
 
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-
-
-
-
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-
-
-
-
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-
-
-
-
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-
-
-
-
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-
-
-
-
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-
-
-
-
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-
-
-
-
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-
-
-
-
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
 
 
 
@@ -779,112 +392,46 @@
 
                                                                     </script>
                                                                     <div class="row-fluid" style="background-color:white;">
+                                                                        @if($designation)
+
+                                                                          @foreach($designation as $desi)
+                                                                                <div class="col-md-6">
+                                                                                    <div class="my-list col-md-12">
+                                                                                        <div class="col-md-2" style="padding:0">
+                                                                                            <img src="{{url('images' . '/' . $desi->image)}}" alt="dsadas" height="80px" width="80px" style="padding:0 " />
+                                                                                        </div>
+                                                                                        <div class="col-md-10">
+                                                                                            <h3 style=" font-size:  20px">&nbsp;{{$desi->username}} </h3>
+                                                                                            <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                <i class="fa fa-star" aria-hidden="true"></i>
 
 
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
+                                                                                                &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
+                                                                                        </div>
+                                                                                        <h3>Experience <i style="text-align: right"> {{$desi->total_exp}} month</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">{{$desi->specialization_course}} </b>  </h3>
+                                                                                        <span class="pull-left  ">Current : {{$desi->company_name}} <br> Title : {{$desi->current_designation}} <br>Education: {{$desi->higher_qualification}}<br>Locations:{{$desi->location}}.</span>
+                                                                                        <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
+
+
+                                                                                        <div class="detail"><br>
+                                                                                            <p>Satyam Singh Rishabh</p>
+                                                                                            <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
+                                                                                            <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                                                Verified</p>
+                                                                                            <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                                                Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                                                Verified</p><br>
+
+                                                                                            <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                                                        @endforeach
+                                                                        @endif
 
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="col-md-6">
-                                                                            <div class="my-list col-md-12">
-                                                                                <div class="col-md-2" style="padding:0">
-                                                                                    <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                </div>
-                                                                                <div class="col-md-10">
-                                                                                    <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                    <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                        <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                        &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                </div>
-                                                                                <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                <div class="detail"><br>
-                                                                                    <p>Satyam Singh Rishabh</p>
-                                                                                    <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                    <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>
-                                                                                    <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                        Verified</p><br>
-
-                                                                                    <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                    </a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
 
 
 
@@ -997,77 +544,45 @@
 
                                                                         </script>
                                                                         <div class="row-fluid" style="background-color:white;">
+                                                                            @if($location)
+
+                                                                                @foreach($location as $locations)
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="my-list col-md-12">
+                                                                                            <div class="col-md-2" style="padding:0">
+                                                                                                <img src="{{url('images' . '/' . $locations->image)}}" alt="dsadas" height="80px" width="80px" style="padding:0 " />
+                                                                                            </div>
+                                                                                            <div class="col-md-10">
+                                                                                                <h3 style=" font-size:  20px">&nbsp;{{$locations->username}} </h3>
+                                                                                                <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                    <i class="fa fa-star" aria-hidden="true"></i>
 
 
-                                                                            <div class="col-md-6">
-                                                                                <div class="my-list col-md-12">
-                                                                                    <div class="col-md-2" style="padding:0">
-                                                                                        <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
+                                                                                                    &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
+                                                                                            </div>
+                                                                                            <h3>Experience <i style="text-align: right"> {{$locations->total_exp}} month</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">{{$locations->specialization_course}} </b>  </h3>
+                                                                                            <span class="pull-left  ">Current : {{$locations->company_name}} <br> Title : {{$locations->current_designation}} <br>Education: {{$locations->higher_qualification}}<br>Locations:{{$locations->location}}.</span>
+                                                                                            <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
+
+
+                                                                                            <div class="detail"><br>
+                                                                                                <p>Satyam Singh Rishabh</p>
+                                                                                                <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
+                                                                                                <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                                                    Verified</p>
+                                                                                                <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                                                    Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                                                    Verified</p><br>
+
+                                                                                                <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
                                                                                     </div>
-                                                                                    <div class="col-md-10">
-                                                                                        <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                        <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                            &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                    </div>
-                                                                                    <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                    <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                    <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                    <div class="detail"><br>
-                                                                                        <p>Satyam Singh Rishabh</p>
-                                                                                        <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                        <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                            Verified</p>
-                                                                                        <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                            Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                            Verified</p><br>
-
-                                                                                        <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                        </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="col-md-6">
-                                                                                <div class="my-list col-md-12">
-                                                                                    <div class="col-md-2" style="padding:0">
-                                                                                        <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
-                                                                                    </div>
-                                                                                    <div class="col-md-10">
-                                                                                        <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                        <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                            &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                    </div>
-                                                                                    <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                    <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                    <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                    <div class="detail"><br>
-                                                                                        <p>Satyam Singh Rishabh</p>
-                                                                                        <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                        <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                            Verified</p>
-                                                                                        <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                            Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                            Verified</p><br>
-
-                                                                                        <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                        </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
+                                                                                @endforeach
+                                                                            @endif
 
 
 
@@ -1181,40 +696,45 @@
                                                                         <div class="row-fluid" style="background-color:white;">
 
 
-                                                                            <div class="col-md-6">
-                                                                                <div class="my-list col-md-12">
-                                                                                    <div class="col-md-2" style="padding:0">
-                                                                                        <img src="img/avatar/avatar.jpg" alt="dsadas"  style="padding:0 " />
+                                                                            @if($industry)
+
+                                                                                @foreach($industry as $industries)
+                                                                                    <div class="col-md-6">
+                                                                                        <div class="my-list col-md-12">
+                                                                                            <div class="col-md-2" style="padding:0">
+                                                                                                <img src="{{url('images' . '/' . $desi->image)}}" alt="dsadas" height="80px" width="80px" style="padding:0 " />
+                                                                                            </div>
+                                                                                            <div class="col-md-10">
+                                                                                                <h3 style=" font-size:  20px">&nbsp;{{$industries->username}} </h3>
+                                                                                                <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                                                                    <i class="fa fa-star" aria-hidden="true"></i>
+
+
+                                                                                                    &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
+                                                                                            </div>
+                                                                                            <h3>Experience <i style="text-align: right"> {{$industries->total_exp}} month</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">{{$industries->specialization_course}} </b>  </h3>
+                                                                                            <span class="pull-left  ">Current : {{$industries->company_name}} <br> Title : {{$industries->current_designation}} <br>Education: {{$industries->higher_qualification}}<br>Locations:{{$industries->location}}.</span>
+                                                                                            <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
+
+
+                                                                                            <div class="detail"><br>
+                                                                                                <p>Satyam Singh Rishabh</p>
+                                                                                                <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
+                                                                                                <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                                                    Verified</p>
+                                                                                                <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                                                    Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
+                                                                                                    Verified</p><br>
+
+                                                                                                <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
                                                                                     </div>
-                                                                                    <div class="col-md-10">
-                                                                                        <h3 style=" font-size:  20px">&nbsp;Satyam Singh Rishabh </h3>
-                                                                                        <h3>Rating: <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
-                                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                                                            <i class="fa fa-star" aria-hidden="true"></i>
-
-
-                                                                                            &nbsp; &nbsp;&nbsp;&nbsp;  <b >Score:</b> 900 </h3>
-                                                                                    </div>
-                                                                                    <h3>Experience <i style="text-align: right"> 3 yrs</i>&nbsp; &nbsp;&nbsp;&nbsp;  <b style="color:blue">Java certification </b>  </h3>
-                                                                                    <span class="pull-left  ">Current : Infosys Infosolution <br> Title : Tech Manager <br>Education: B.Sc(Computer Science)<br>Locations:Andheri, Mumbai.</span>
-                                                                                    <div class="offer">Skills: Closer, Time Management, Inbound, Follow Ups, Outbound Calling, <a href="#"> More</a></div>
-
-
-                                                                                    <div class="detail"><br>
-                                                                                        <p>Satyam Singh Rishabh</p>
-                                                                                        <!-- <img src="http://hpservicecenterschennai.in/images/hp_laptop_service_centers_in_guindy.png" alt="dsadas" /> -->
-                                                                                        <p style="font-size: 16px">ssatyam@gmail.com &nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                            Verified</p>
-                                                                                        <p style="font-size: 16px">+91 123456789&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                            Verified</p>                        <p style="font-size: 16px">Documents&nbsp;&nbsp;<i style="color:green" class="fa fa-check-circle" aria-hidden="true"></i>
-                                                                                            Verified</p><br>
-
-                                                                                        <a href="#" class="btn btn-info">View Deatil</a>&nbsp;<a href="#" class="btn btn-info">Connect</a>&nbsp;<a href="#" class="btn btn-info"><i class="fa fa-share" aria-hidden="true"></i>
-                                                                                        </a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
+                                                                                @endforeach
+                                                                            @endif
 
 
 
@@ -1430,11 +950,12 @@
                                                     @if(isset($aPost))
                                                     @foreach($aPost as $post)
                                                     <div class="tl-label panel widget light-widget panel-bd-left">
-                                                        <div class="panel-body"> <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="{{url('web/crm/jobseeker/img/avatar/avatar-5.jpg')}}">
-                                                            <h3 class="mgtp-10 mgbt-xs-5"> {{Auth::user()->first_name}} {{Auth::user()->last_name}}<em class="vd_soft-grey font-sm">via facebook</em> </h3>
-                                                            <span class="vd_soft-grey">1.30 pm  -  near <a href="#">Los Angeles</a> - <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-original-title="Shared Globally" class=""><i class="fa fa-globe"></i></a></span>
-                                                            <div class="clearfix mgbt-xs-10"></div>
-                                                            <p class="mgbt-xs-20"> Hello <a href="#">Jason</a>,{{$post->post}}</p>
+                                                        <div class="panel-body"> <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="/uploads/{{$post->image}}" height="100px" width="100px">
+                                                            <h3 class="mgtp-10 mgbt-xs-5"> {{Auth::user()->first_name}} {{Auth::user()->last_name}}<em class="vd_soft-grey font-sm"></em> </h3>
+                                                            <span class="vd_soft-grey">{{
+                                                                    time_elapsed_string($upostfeeddata->created_at) }}  -  near <a href="#">India</a> - <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-original-title="Shared Globally" class=""><i class="fa fa-globe"></i></a></span>
+                                                            <div class="clearfix mgbt-xs-10" style="padding-top: 10px;"><img src="/uploads/{{$post->image}}" width="200" height="200"></div>
+                                                            <p class="mgbt-xs-20"> <a href="#"></a>,{{$post->description}}</p>
                                                             <div class="tl-action"><a role="button" class="btn btn-sm mgr-10" href="javascript:void(0)"><i class="fa fa-thumbs-up fa-fw"></i> Like (10)</a> <a role="button" class="btn btn-sm btn-xs mgr-10" href="javascript:void(0)"><i class="fa fa-comment fa-fw"></i> Comment (2)</a> <a role="button" class="btn btn-sm " href="javascript:void(0)"><i class="fa fa-share fa-fw"></i> Share</a></div>
                                                             <hr class="mgtp-0"/>
                                                             <div class="comments">
@@ -4514,11 +4035,11 @@
 
 
                     <div >
-                        <form action="{{route('web.job.postFeed')}}" method="post">
+                        <form action="{{route('web.job.postFeed')}}" method="post" enctype="multipart/form-data">
                             {{csrf_field()}}
                         <div class="child-menu">
 
-                            <textarea class="no-bd" rows="14" placeholder="What are you doing?" name="post" ></textarea>
+                            <textarea id="emogii" class="no-bd" rows="14" placeholder="What are you doing?" name="post" ></textarea>
                             <div class="vd_textarea-menu vd_bg-yellow vd_bd-yellow" >
                                 <input class="form-control" type="text" placeholder="#tags" name="tags">
                                 <ul class="nav nav-pills ">
@@ -4532,7 +4053,7 @@
                                     <li class="one-icon">
                                         <a data-toggle="tab-post" href="javascript:void(0);">
                                         <span class="menu-icon">
-                                          <i class="fa fa-camera fa-fw"></i>
+                                        <input type="file" name="image" style="display:none;" id="image"><i class="fa fa-camera fa-fw" id="icon-file2"></i>
                                         </span>
                                         </a>
                                     </li>
@@ -4548,15 +4069,11 @@
                                         <span class="menu-icon">
                                           <i class="fa fa-check fa-fw"></i>
                                         </span>
-
                                         </a>
                                     </li>
-
                                 </ul>
-
                             </div>
                             <div class="col-sm-12 controls">
-
                             </div>
                         </div> <!-- child-menu -->
                             <div class="modal-footer background-login">
@@ -4975,5 +4492,18 @@
 
 
 </div>
+<script>
+    $("#icon-file2").click(function(){
+        //console.log("yes2");
+        $('#image').trigger('click');
+    });
+</script>
+<script src="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.js"></script>
+<script>
+    $('#emogii').emojioneArea({
+        pickerPosition:"bottom",
+        toneStyle: "bullet"
+    });
+</script>
 
 @include('web.template.CRM.job.include.footer')

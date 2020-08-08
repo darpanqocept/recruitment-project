@@ -325,8 +325,8 @@
                                     <br><br>
 
                                 </div>
-
-
+                                @if(isset($aProfile))
+                                @foreach($aProfile as $profile)
                                 <div id="profile-tab" class="tab-pane  active">
                                     <div class="pd-20">
 
@@ -335,7 +335,7 @@
                                             <div class="col-sm-6">
                                                 <div class="row mgbt-xs-0">
                                                     <label class="col-xs-5 control-label">First Name:</label>
-                                                    <div class="col-xs-7 controls">Mariah</div>
+                                                    <div class="col-xs-7 controls">{{$profile->first_name}}</div>
                                                     <!-- col-sm-10 -->
                                                 </div>
                                             </div>
@@ -349,7 +349,7 @@
                                             <div class="col-sm-6">
                                                 <div class="row mgbt-xs-0">
                                                     <label class="col-xs-5 control-label">User Name:</label>
-                                                    <div class="col-xs-7 controls">Mariah</div>
+                                                    <div class="col-xs-7 controls">{{$profile->username}}</div>
                                                     <!-- col-sm-10 -->
                                                 </div>
                                             </div>
@@ -359,7 +359,7 @@
                                             <div class="col-sm-6">
                                                 <div class="row mgbt-xs-0">
                                                     <label class="col-xs-5 control-label">Email:</label>
-                                                    <div class="col-xs-7 controls">mariah@Vendroid.com</div>
+                                                    <div class="col-xs-7 controls">{{$profile->email}}</div>
                                                     <!-- col-sm-10 -->
                                                 </div>
                                             </div>
@@ -368,7 +368,7 @@
                                             <div class="col-sm-6">
                                                 <div class="row mgbt-xs-0">
                                                     <label class="col-xs-5 control-label">Gender:</label>
-                                                    <div class="col-xs-7 controls">Female</div>
+                                                    <div class="col-xs-7 controls">{{$profile->gender}}</div>
                                                     <!-- col-sm-10 -->
                                                 </div>
                                             </div>
@@ -376,21 +376,21 @@
                                             <div class="col-sm-6">
                                                 <div class="row mgbt-xs-0">
                                                     <label class="col-xs-5 control-label">City:</label>
-                                                    <div class="col-xs-7 controls">Los Angeles</div>
+                                                    <div class="col-xs-7 controls">{{$profile->location}}</div>
                                                     <!-- col-sm-10 -->
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="row mgbt-xs-0">
                                                     <label class="col-xs-5 control-label">Country:</label>
-                                                    <div class="col-xs-7 controls">United States</div>
+                                                    <div class="col-xs-7 controls">India</div>
                                                     <!-- col-sm-10 -->
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="row mgbt-xs-0">
                                                     <label class="col-xs-5 control-label">Birthday:</label>
-                                                    <div class="col-xs-7 controls">Jan 22, 1984</div>
+                                                    <div class="col-xs-7 controls">{{$profile->dob}}</div>
                                                     <!-- col-sm-10 -->
                                                 </div>
                                             </div>
@@ -411,7 +411,7 @@
                                             <div class="col-sm-6">
                                                 <div class="row mgbt-xs-0">
                                                     <label class="col-xs-5 control-label">Phone:</label>
-                                                    <div class="col-xs-7 controls">+1-234-5678</div>
+                                                    <div class="col-xs-7 controls">{{$profile->mobile}}</div>
                                                     <!-- col-sm-10 -->
                                                 </div>
                                             </div>
@@ -422,8 +422,8 @@
                                                 <h3 class="mgbt-xs-15 font-semibold"><i class="fa fa-file-text-o mgr-10 profile-icon"></i> EXPERIENCE</h3>
                                                 <div class="content-list content-menu">
                                                     <ul class="list-wrapper">
-                                                        <li class="mgbt-xs-10"> <span class="menu-icon vd_green"><i class="fa  fa-circle-o"></i></span> <span class="menu-text"> <a href="http://www.venmond.com/">Owner</a> at <a href="http://www.venmond.com/">Vendroid Ltd.</a> <span class="menu-info"><span class="menu-date"> March 2013 ~ Now</span></span> </span> </li>
-                                                        <li class="mgbt-xs-10"> <span class="menu-icon vd_grey"><i class=" fa  fa-circle-o"></i></span> <span class="menu-text"> <a href="http://www.venmond.com/">CEO</a> at <a href="http://www.venmond.com/">Mc. Dondon</a> <span class="menu-info"><span class="menu-date"> March 2011 ~ February 2013</span></span> </span> </li>
+                                                        <li class="mgbt-xs-10"> <span class="menu-icon vd_green"><i class="fa  fa-circle-o"></i></span> <span class="menu-text"> <a href="http://www.venmond.com/">Owner</a> at <a href="http://www.venmond.com/">{{$profile->company_name}}</a> <span class="menu-info"><span class="menu-date"> {{$profile->passing_year}}</span></span> </span> </li>
+                                                        <li class="mgbt-xs-10"> <span class="menu-icon vd_grey"><i class=" fa  fa-circle-o"></i></span> <span class="menu-text"> <a href="http://www.venmond.com/">CEO</a> at <a href="http://www.venmond.com/">Mc. Dondon</a> <span class="menu-info"><span class="menu-date"> {{$profile->passing_year}}</span></span> </span> </li>
                                                         <li class="mgbt-xs-10"> <span class="menu-icon vd_grey"><i class=" fa  fa-circle-o"></i></span> <span class="menu-text"> <a href="http://www.venmond.com/">Web Designer</a> at <a href="http://www.venmond.com/">Web Design Company Ltd.</a> <span class="menu-info"><span class="menu-date"> March 2010 ~ February 2011</span></span> </span> </li>
                                                         <li class="mgbt-xs-10"> <span class="menu-icon vd_grey"><i class=" fa  fa-circle-o"></i></span> <span class="menu-text"> <a href="http://www.venmond.com/">Sales</a> at <a href="http://www.venmond.com/">Sales Company Ltd.</a> <span class="menu-info"><span class="menu-date"> March 2009 ~ February 2010</span></span> </span> </li>
                                                     </ul>
@@ -513,6 +513,8 @@
                                     </div>
                                     <!-- pd-20 -->
                                 </div>
+                                @endforeach
+                                        @endif
                                 <!-- home-tab -->
 
                                 <div id="projects-tab" class="tab-pane">
@@ -764,9 +766,14 @@
                                         </ul>
                                         <br/>
                                         <div class="isotope js-isotope vd_gallery">
+
+                                            @if(isset($aPersonal))
+                                            @foreach($aPersonal as $personal)
+
                                             <div class="gallery-item  filter-1">
+                                                <?php print_r($aPersonal); exit(); ?>
                                                 <a href="img/photos/17.jpg" data-rel="prettyPhoto[2]">
-                                                    <img alt="example image" src="img/photos/17.jpg">
+                                                    <img src="personal/{{$personal['id_proof']}}" width="200" height="200">
                                                     <div class="bg-cover"></div>
                                                 </a>
                                                 <div class="vd_info">
@@ -777,6 +784,9 @@
                                                 </div>
 
                                             </div>
+                                            @endforeach
+                                            @endif
+
                                             <div class="gallery-item  filter-2">
                                                 <a href="img/photos/18.png" data-rel="prettyPhoto[2]">
                                                     <img alt="example image" src="img/photos/18.png">
@@ -899,6 +909,7 @@
                                                     <a class="vd_bg-green vd_white mgr-10 btn vd_round-btn btn-xs" role="button" href="#"><i class="fa fa-comments"></i></a>
                                                 </div>
                                             </div>
+
 
 
                                         </div>

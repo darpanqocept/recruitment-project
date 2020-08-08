@@ -16,99 +16,104 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="job-portal" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="job-seeker.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/job-seeker.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.163636">
-              <caret line="1473" column="58" selection-start-line="1473" selection-start-column="58" selection-end-line="1473" selection-end-column="58" />
-              <folding>
-                <element signature="e#123937#128460#0#HTML" expanded="false" />
-                <element signature="e#128637#130425#0#HTML" expanded="false" />
-                <element signature="e#130670#132460#0#HTML" expanded="false" />
-                <element signature="e#132582#135717#0#HTML" expanded="false" />
-                <element signature="e#353090#354887#0#HTML" expanded="false" />
-                <element signature="e#357308#357358#0#HTML" expanded="true" />
-                <element signature="e#358266#360589#0#HTML" expanded="false" />
-                <element signature="e#360652#377195#0#HTML" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.730769">
-              <caret line="34" column="70" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobseekerController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JobseekerController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/JobseekerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.55376345">
-              <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+            <state vertical-scroll-proportion="-15.038462">
+              <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
               <folding>
-                <element signature="e#44#73#0#PHP" expanded="true" />
+                <element signature="e#44#81#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="job-seeker.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/job-seeker.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6320939">
+              <caret line="955" column="94" selection-start-line="955" selection-start-column="90" selection-end-line="955" selection-end-column="94" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/resources/views/web/layouts/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/include/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/home/home.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/layouts/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/include/slider.blade.php" />
-        <option value="$PROJECT_DIR$/public/web/js/jquery.slitslider.js" />
-        <option value="$PROJECT_DIR$/resources/views/web/include/header-nav.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/job-seeker/job-seeker.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/recruiter/recruiter.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/recruiter.blade.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/RecruiterController.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/include/footer.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/FreelancerController.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/include/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/candidate.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/freelancer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/my-job.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/network.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/profile.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/project.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/view-profile.blade.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job-seeker/include/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job-seeker/job-seeker.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/include/footer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/profile.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/view-profile.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/my-job.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/include/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/search.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/JobSeekerPost.php" />
+        <option value="$PROJECT_DIR$/app/Models/UserType.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_06_091536_create_user_types_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_08_04_122840_create_job_seeker_posts_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/JobSeekerPost.php" />
+        <option value="$PROJECT_DIR$/app/Models/JobSeekerPersonalInfo.php" />
+        <option value="$PROJECT_DIR$/database/seeds/UserTypeSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/UserSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Models/JobSeekerInfo.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_07_051601_create_job_seeker_infos_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_06_140519_create_job_seeker_personal_infos_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_05_062102_create_job_seeker_profiles_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/JobSeekerProfile.php" />
+        <option value="$PROJECT_DIR$/app/Models/Rating.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_07_122141_create_ratings_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/profile.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/PostJobadd.php" />
+        <option value="$PROJECT_DIR$/app/Models/UserPostfeedcomment.php" />
+        <option value="$PROJECT_DIR$/app/Models/UserPostfeedlike.php" />
+        <option value="$PROJECT_DIR$/app/Models/UserPostfeedshare.php" />
+        <option value="$PROJECT_DIR$/public/web/plugins/izitoast/css/iziToast.css" />
+        <option value="$PROJECT_DIR$/public/web/plugins/izitoast/js/iziToast.js" />
+        <option value="$PROJECT_DIR$/public/web/plugins/jquery-tags-input/jquery.tagsinput.css" />
+        <option value="$PROJECT_DIR$/public/web/plugins/jquery-tags-input/jquery.tagsinput.js" />
+        <option value="$PROJECT_DIR$/public/web/plugins/jquery-tags-input/jquery.tagsinput.min.css" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/candidate.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/my-job.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/network.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/profile.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/project.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/view-profile.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/editjob.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Web/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/register/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/RecruiterController.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_06_091233_create_user_post_feeds_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/include/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/include/header.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/job-seeker.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/view-profile.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_08_093831_create_post_jobadds_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_08_094037_create_user_postfeedcomments_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_08_094105_create_user_postfeedlikes_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_08_08_094205_create_user_postfeedshares_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/register/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/UserPostFeed.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Web/JobseekerController.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/template/CRM/job/job-seeker.blade.php" />
       </list>
     </option>
   </component>
@@ -124,10 +129,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -152,6 +157,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,6 +233,36 @@
               <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="register" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="job-portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="job-portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -288,45 +324,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="freelancer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="job-portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="job-portal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CRM" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="freelancer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
+              <option name="myItemId" value="job" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,6 +375,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="job-portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="job-portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -481,13 +497,13 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pocket-coach" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../my_receipie" />
     <property name="FullScreen" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -531,17 +547,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <frame x="1" y="1" width="1364" height="726" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21406959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19401841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15720859" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828283" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -563,8 +579,8 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12859304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828283" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22392638" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -590,215 +606,109 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/web/include/header-nav.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/include/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="66" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/include/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9139785">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2054054">
-          <caret line="491" column="14" selection-start-line="491" selection-start-column="14" selection-end-line="491" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/layouts/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78673834">
-          <caret line="26" column="110" selection-start-line="26" selection-start-column="110" selection-end-line="26" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/home/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.854546">
-          <caret line="61" column="10" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/layouts/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6153846">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/web/js/jquery.slitslider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6054053">
-          <caret line="105" column="80" selection-start-line="105" selection-start-column="72" selection-end-line="105" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/include/slider.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4545455">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/include/header-nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8172043">
-          <caret line="35" column="70" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="74" />
+        <state vertical-scroll-proportion="0.7504726">
+          <caret line="1303" column="69" selection-start-line="1303" selection-start-column="69" selection-end-line="1303" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37096775">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.5716846">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/free/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="260" column="42" selection-start-line="0" selection-start-column="0" selection-end-line="1513" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/free/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="61" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="1455" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.538462">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/recruiter.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44990548">
-          <caret line="14" column="181" selection-start-line="14" selection-start-column="181" selection-end-line="14" selection-end-column="181" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/free/recDashBoard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="75" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="2417" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/RecruiterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3046595">
-          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6318493">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/free/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="41" selection-start-line="0" selection-start-column="0" selection-end-line="1136" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/FreelancerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.538462">
-          <caret line="44" column="30" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/candidate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.538462">
-          <caret line="1594" column="38" selection-start-line="1594" selection-start-column="38" selection-end-line="1594" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/freelancer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78673834">
-          <caret line="2413" column="38" selection-start-line="2413" selection-start-column="38" selection-end-line="2413" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/my-job.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.538462">
-          <caret line="2178" column="38" selection-start-line="2178" selection-start-column="38" selection-end-line="2178" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/network.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.538462">
-          <caret line="5266" column="38" selection-start-line="5266" selection-start-column="38" selection-end-line="5266" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.538462">
-          <caret line="2360" column="38" selection-start-line="2360" selection-start-column="38" selection-end-line="2360" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/project.blade.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <caret line="541" column="22" selection-start-line="541" selection-start-column="22" selection-end-line="541" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/view-profile.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_06_091536_create_user_types_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.538462">
-          <caret line="4637" column="38" selection-start-line="4637" selection-start-column="38" selection-end-line="4637" selection-end-column="38" />
-          <folding />
+        <state vertical-scroll-proportion="0.609319">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/jobseeker/header.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.89091">
-          <caret line="1484" column="6" selection-start-line="1484" selection-start-column="6" selection-end-line="1484" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.11290322">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UserSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16308244">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UserTypeSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4874552">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/JobSeekerPersonalInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1827957">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/jobseeker/index.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/UserType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5483871">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_06_140519_create_job_seeker_personal_infos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.769231">
+          <caret line="15" column="61" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_07_122141_create_ratings_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/JobSeekerProfile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56666666">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Rating.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25185186">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/PostJobadd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -806,194 +716,843 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/UserPostfeedcomment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6953405">
-          <caret line="229" column="51" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/UserPostfeedlike.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5609319">
-          <caret line="152" column="7" selection-start-line="152" selection-start-column="7" selection-end-line="152" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/jobseeker/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="448" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="1455" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1588053190000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1588053190000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1588053190000" expanded="true" signature="-1:-1" placeholder="..." />
+            <element signature="e#29#57#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/include/footer.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/UserPostfeedshare.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.153847">
-          <caret line="1455" column="7" selection-start-line="1455" selection-start-column="7" selection-end-line="1455" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/jobseeker/EditProfile.php">
+    <entry file="file://$PROJECT_DIR$/public/web/plugins/izitoast/css/iziToast.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="2567" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2409#2942#1" expanded="false" />
+            <element signature="e#5869#6986#1" expanded="false" />
+            <element signature="e#7106#8119#1" expanded="false" />
+            <element signature="e#8237#9402#1" expanded="false" />
+            <element signature="e#9522#9939#1" expanded="false" />
+            <element signature="e#10060#11881#1" expanded="false" />
+            <element signature="e#16723#17416#1" expanded="false" />
+            <element signature="e#17602#18719#1" expanded="false" />
+            <element signature="e#18842#19871#1" expanded="false" />
+            <element signature="e#19992#21157#1" expanded="false" />
+            <element signature="e#21280#21697#1" expanded="false" />
+            <element signature="e#21821#23726#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/web/plugins/izitoast/js/iziToast.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/web/plugins/jquery-tags-input/jquery.tagsinput.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/jobseeker/ProfileForAll.php">
+    <entry file="file://$PROJECT_DIR$/public/web/plugins/jquery-tags-input/jquery.tagsinput.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1170" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/web/plugins/jquery-tags-input/jquery.tagsinput.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/my-job.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2074#2096#0#HTML" expanded="true" />
+            <element signature="e#8507#8549#0#HTML" expanded="true" />
+            <element signature="e#13935#13953#0#HTML" expanded="true" />
+            <element signature="e#14620#14638#0#HTML" expanded="true" />
+            <element signature="e#14961#14979#0#HTML" expanded="true" />
+            <element signature="e#15051#15069#0#HTML" expanded="true" />
+            <element signature="e#16950#16968#0#HTML" expanded="true" />
+            <element signature="e#17892#17910#0#HTML" expanded="true" />
+            <element signature="e#18589#18607#0#HTML" expanded="true" />
+            <element signature="e#20246#20264#0#HTML" expanded="true" />
+            <element signature="e#21538#21556#0#HTML" expanded="true" />
+            <element signature="e#22970#22988#0#HTML" expanded="true" />
+            <element signature="e#24167#24238#0#HTML" expanded="true" />
+            <element signature="e#24351#24369#0#HTML" expanded="true" />
+            <element signature="e#24805#24840#0#HTML" expanded="true" />
+            <element signature="e#25876#25923#0#HTML" expanded="true" />
+            <element signature="e#26341#26409#0#HTML" expanded="true" />
+            <element signature="e#26523#26541#0#HTML" expanded="true" />
+            <element signature="e#27932#27950#0#HTML" expanded="true" />
+            <element signature="e#29244#29312#0#HTML" expanded="true" />
+            <element signature="e#29430#29448#0#HTML" expanded="true" />
+            <element signature="e#30014#30082#0#HTML" expanded="true" />
+            <element signature="e#30204#30222#0#HTML" expanded="true" />
+            <element signature="e#30776#30844#0#HTML" expanded="true" />
+            <element signature="e#30998#31066#0#HTML" expanded="true" />
+            <element signature="e#31187#31205#0#HTML" expanded="true" />
+            <element signature="e#32295#32363#0#HTML" expanded="true" />
+            <element signature="e#32483#32501#0#HTML" expanded="true" />
+            <element signature="e#32986#33054#0#HTML" expanded="true" />
+            <element signature="e#33170#33188#0#HTML" expanded="true" />
+            <element signature="e#33437#33472#0#HTML" expanded="true" />
+            <element signature="e#34152#34199#0#HTML" expanded="true" />
+            <element signature="e#34601#34669#0#HTML" expanded="true" />
+            <element signature="e#35250#35318#0#HTML" expanded="true" />
+            <element signature="e#35431#35449#0#HTML" expanded="true" />
+            <element signature="e#35910#35978#0#HTML" expanded="true" />
+            <element signature="e#36086#36104#0#HTML" expanded="true" />
+            <element signature="e#36564#36632#0#HTML" expanded="true" />
+            <element signature="e#36755#36773#0#HTML" expanded="true" />
+            <element signature="e#37014#37049#0#HTML" expanded="true" />
+            <element signature="e#38033#38080#0#HTML" expanded="true" />
+            <element signature="e#38383#38451#0#HTML" expanded="true" />
+            <element signature="e#39147#39165#0#HTML" expanded="true" />
+            <element signature="e#39813#39831#0#HTML" expanded="true" />
+            <element signature="e#40476#40494#0#HTML" expanded="true" />
+            <element signature="e#41132#41150#0#HTML" expanded="true" />
+            <element signature="e#41784#41802#0#HTML" expanded="true" />
+            <element signature="e#42430#42448#0#HTML" expanded="true" />
+            <element signature="e#43584#43602#0#HTML" expanded="true" />
+            <element signature="e#44200#44268#0#HTML" expanded="true" />
+            <element signature="e#48148#48216#0#HTML" expanded="true" />
+            <element signature="e#73685#73719#0#HTML" expanded="true" />
+            <element signature="e#73811#73833#0#HTML" expanded="true" />
+            <element signature="e#74370#74389#0#HTML" expanded="true" />
+            <element signature="e#74484#74519#0#HTML" expanded="true" />
+            <element signature="e#74607#74625#0#HTML" expanded="true" />
+            <element signature="e#97685#97705#0#HTML" expanded="true" />
+            <element signature="e#115131#115153#0#HTML" expanded="true" />
+            <element signature="e#116960#116982#0#HTML" expanded="true" />
+            <element signature="e#145722#145744#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/network.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3212#3235#0#HTML" expanded="true" />
+            <element signature="e#3379#3397#0#HTML" expanded="true" />
+            <element signature="e#15862#15893#0#HTML" expanded="true" />
+            <element signature="e#16202#16219#0#HTML" expanded="true" />
+            <element signature="e#16352#16370#0#HTML" expanded="true" />
+            <element signature="e#16653#16678#0#HTML" expanded="true" />
+            <element signature="e#17628#17653#0#HTML" expanded="true" />
+            <element signature="e#17694#17712#0#HTML" expanded="true" />
+            <element signature="e#18688#18711#0#HTML" expanded="true" />
+            <element signature="e#18745#18764#0#HTML" expanded="true" />
+            <element signature="e#19004#19027#0#HTML" expanded="true" />
+            <element signature="e#19056#19075#0#HTML" expanded="true" />
+            <element signature="e#19254#19277#0#HTML" expanded="true" />
+            <element signature="e#19302#19321#0#HTML" expanded="true" />
+            <element signature="e#20391#20408#0#HTML" expanded="true" />
+            <element signature="e#20541#20559#0#HTML" expanded="true" />
+            <element signature="e#20842#20867#0#HTML" expanded="true" />
+            <element signature="e#21817#21842#0#HTML" expanded="true" />
+            <element signature="e#21883#21901#0#HTML" expanded="true" />
+            <element signature="e#22881#22904#0#HTML" expanded="true" />
+            <element signature="e#22938#22957#0#HTML" expanded="true" />
+            <element signature="e#23197#23220#0#HTML" expanded="true" />
+            <element signature="e#23249#23268#0#HTML" expanded="true" />
+            <element signature="e#23447#23470#0#HTML" expanded="true" />
+            <element signature="e#23495#23514#0#HTML" expanded="true" />
+            <element signature="e#24585#24602#0#HTML" expanded="true" />
+            <element signature="e#24735#24753#0#HTML" expanded="true" />
+            <element signature="e#25036#25061#0#HTML" expanded="true" />
+            <element signature="e#26011#26036#0#HTML" expanded="true" />
+            <element signature="e#26077#26095#0#HTML" expanded="true" />
+            <element signature="e#27075#27098#0#HTML" expanded="true" />
+            <element signature="e#27132#27151#0#HTML" expanded="true" />
+            <element signature="e#27391#27414#0#HTML" expanded="true" />
+            <element signature="e#27443#27462#0#HTML" expanded="true" />
+            <element signature="e#27641#27664#0#HTML" expanded="true" />
+            <element signature="e#27689#27708#0#HTML" expanded="true" />
+            <element signature="e#28780#28797#0#HTML" expanded="true" />
+            <element signature="e#28930#28948#0#HTML" expanded="true" />
+            <element signature="e#29231#29256#0#HTML" expanded="true" />
+            <element signature="e#30206#30231#0#HTML" expanded="true" />
+            <element signature="e#30272#30290#0#HTML" expanded="true" />
+            <element signature="e#31270#31293#0#HTML" expanded="true" />
+            <element signature="e#31327#31346#0#HTML" expanded="true" />
+            <element signature="e#31586#31609#0#HTML" expanded="true" />
+            <element signature="e#31638#31657#0#HTML" expanded="true" />
+            <element signature="e#31836#31859#0#HTML" expanded="true" />
+            <element signature="e#31884#31903#0#HTML" expanded="true" />
+            <element signature="e#32975#32992#0#HTML" expanded="true" />
+            <element signature="e#33125#33143#0#HTML" expanded="true" />
+            <element signature="e#33426#33451#0#HTML" expanded="true" />
+            <element signature="e#34401#34426#0#HTML" expanded="true" />
+            <element signature="e#34467#34485#0#HTML" expanded="true" />
+            <element signature="e#35465#35488#0#HTML" expanded="true" />
+            <element signature="e#35522#35541#0#HTML" expanded="true" />
+            <element signature="e#35781#35804#0#HTML" expanded="true" />
+            <element signature="e#35833#35852#0#HTML" expanded="true" />
+            <element signature="e#36031#36054#0#HTML" expanded="true" />
+            <element signature="e#36079#36098#0#HTML" expanded="true" />
+            <element signature="e#37169#37186#0#HTML" expanded="true" />
+            <element signature="e#37319#37337#0#HTML" expanded="true" />
+            <element signature="e#37620#37645#0#HTML" expanded="true" />
+            <element signature="e#38595#38620#0#HTML" expanded="true" />
+            <element signature="e#38661#38679#0#HTML" expanded="true" />
+            <element signature="e#39659#39682#0#HTML" expanded="true" />
+            <element signature="e#39716#39735#0#HTML" expanded="true" />
+            <element signature="e#39975#39998#0#HTML" expanded="true" />
+            <element signature="e#40027#40046#0#HTML" expanded="true" />
+            <element signature="e#40225#40248#0#HTML" expanded="true" />
+            <element signature="e#40273#40292#0#HTML" expanded="true" />
+            <element signature="e#41363#41380#0#HTML" expanded="true" />
+            <element signature="e#41513#41531#0#HTML" expanded="true" />
+            <element signature="e#41814#41839#0#HTML" expanded="true" />
+            <element signature="e#42789#42814#0#HTML" expanded="true" />
+            <element signature="e#42855#42873#0#HTML" expanded="true" />
+            <element signature="e#43853#43876#0#HTML" expanded="true" />
+            <element signature="e#43910#43929#0#HTML" expanded="true" />
+            <element signature="e#44169#44192#0#HTML" expanded="true" />
+            <element signature="e#44221#44240#0#HTML" expanded="true" />
+            <element signature="e#44419#44442#0#HTML" expanded="true" />
+            <element signature="e#44467#44486#0#HTML" expanded="true" />
+            <element signature="e#45557#45574#0#HTML" expanded="true" />
+            <element signature="e#45707#45725#0#HTML" expanded="true" />
+            <element signature="e#46008#46033#0#HTML" expanded="true" />
+            <element signature="e#46983#47008#0#HTML" expanded="true" />
+            <element signature="e#47049#47067#0#HTML" expanded="true" />
+            <element signature="e#48047#48070#0#HTML" expanded="true" />
+            <element signature="e#48104#48123#0#HTML" expanded="true" />
+            <element signature="e#48363#48386#0#HTML" expanded="true" />
+            <element signature="e#48415#48434#0#HTML" expanded="true" />
+            <element signature="e#48613#48636#0#HTML" expanded="true" />
+            <element signature="e#48661#48680#0#HTML" expanded="true" />
+            <element signature="e#49751#49768#0#HTML" expanded="true" />
+            <element signature="e#49901#49919#0#HTML" expanded="true" />
+            <element signature="e#50202#50227#0#HTML" expanded="true" />
+            <element signature="e#51177#51202#0#HTML" expanded="true" />
+            <element signature="e#51243#51261#0#HTML" expanded="true" />
+            <element signature="e#52241#52264#0#HTML" expanded="true" />
+            <element signature="e#52298#52317#0#HTML" expanded="true" />
+            <element signature="e#52557#52580#0#HTML" expanded="true" />
+            <element signature="e#52609#52628#0#HTML" expanded="true" />
+            <element signature="e#52807#52830#0#HTML" expanded="true" />
+            <element signature="e#52855#52874#0#HTML" expanded="true" />
+            <element signature="e#53946#53963#0#HTML" expanded="true" />
+            <element signature="e#54096#54114#0#HTML" expanded="true" />
+            <element signature="e#54397#54422#0#HTML" expanded="true" />
+            <element signature="e#55372#55397#0#HTML" expanded="true" />
+            <element signature="e#55438#55456#0#HTML" expanded="true" />
+            <element signature="e#56432#56455#0#HTML" expanded="true" />
+            <element signature="e#56489#56508#0#HTML" expanded="true" />
+            <element signature="e#56748#56771#0#HTML" expanded="true" />
+            <element signature="e#56800#56819#0#HTML" expanded="true" />
+            <element signature="e#56998#57021#0#HTML" expanded="true" />
+            <element signature="e#57046#57065#0#HTML" expanded="true" />
+            <element signature="e#58135#58152#0#HTML" expanded="true" />
+            <element signature="e#58285#58303#0#HTML" expanded="true" />
+            <element signature="e#58586#58611#0#HTML" expanded="true" />
+            <element signature="e#59561#59586#0#HTML" expanded="true" />
+            <element signature="e#59627#59645#0#HTML" expanded="true" />
+            <element signature="e#60621#60644#0#HTML" expanded="true" />
+            <element signature="e#60678#60697#0#HTML" expanded="true" />
+            <element signature="e#60937#60960#0#HTML" expanded="true" />
+            <element signature="e#60989#61008#0#HTML" expanded="true" />
+            <element signature="e#61187#61210#0#HTML" expanded="true" />
+            <element signature="e#61235#61254#0#HTML" expanded="true" />
+            <element signature="e#69484#69515#0#HTML" expanded="true" />
+            <element signature="e#69824#69841#0#HTML" expanded="true" />
+            <element signature="e#69974#69992#0#HTML" expanded="true" />
+            <element signature="e#70275#70300#0#HTML" expanded="true" />
+            <element signature="e#71250#71275#0#HTML" expanded="true" />
+            <element signature="e#71316#71334#0#HTML" expanded="true" />
+            <element signature="e#72310#72333#0#HTML" expanded="true" />
+            <element signature="e#72367#72386#0#HTML" expanded="true" />
+            <element signature="e#72626#72649#0#HTML" expanded="true" />
+            <element signature="e#72678#72697#0#HTML" expanded="true" />
+            <element signature="e#72876#72899#0#HTML" expanded="true" />
+            <element signature="e#72924#72943#0#HTML" expanded="true" />
+            <element signature="e#74013#74030#0#HTML" expanded="true" />
+            <element signature="e#74163#74181#0#HTML" expanded="true" />
+            <element signature="e#74464#74489#0#HTML" expanded="true" />
+            <element signature="e#75439#75464#0#HTML" expanded="true" />
+            <element signature="e#75505#75523#0#HTML" expanded="true" />
+            <element signature="e#76499#76522#0#HTML" expanded="true" />
+            <element signature="e#76556#76575#0#HTML" expanded="true" />
+            <element signature="e#76815#76838#0#HTML" expanded="true" />
+            <element signature="e#76867#76886#0#HTML" expanded="true" />
+            <element signature="e#77065#77088#0#HTML" expanded="true" />
+            <element signature="e#77113#77132#0#HTML" expanded="true" />
+            <element signature="e#78202#78219#0#HTML" expanded="true" />
+            <element signature="e#78352#78370#0#HTML" expanded="true" />
+            <element signature="e#78653#78678#0#HTML" expanded="true" />
+            <element signature="e#79628#79653#0#HTML" expanded="true" />
+            <element signature="e#79694#79712#0#HTML" expanded="true" />
+            <element signature="e#80688#80711#0#HTML" expanded="true" />
+            <element signature="e#80745#80764#0#HTML" expanded="true" />
+            <element signature="e#81004#81027#0#HTML" expanded="true" />
+            <element signature="e#81056#81075#0#HTML" expanded="true" />
+            <element signature="e#81254#81277#0#HTML" expanded="true" />
+            <element signature="e#81302#81321#0#HTML" expanded="true" />
+            <element signature="e#89992#90023#0#HTML" expanded="true" />
+            <element signature="e#90344#90361#0#HTML" expanded="true" />
+            <element signature="e#90498#90516#0#HTML" expanded="true" />
+            <element signature="e#90811#90836#0#HTML" expanded="true" />
+            <element signature="e#91814#91839#0#HTML" expanded="true" />
+            <element signature="e#91880#91898#0#HTML" expanded="true" />
+            <element signature="e#92898#92921#0#HTML" expanded="true" />
+            <element signature="e#92955#92974#0#HTML" expanded="true" />
+            <element signature="e#93222#93245#0#HTML" expanded="true" />
+            <element signature="e#93274#93293#0#HTML" expanded="true" />
+            <element signature="e#93476#93499#0#HTML" expanded="true" />
+            <element signature="e#93524#93543#0#HTML" expanded="true" />
+            <element signature="e#94649#94666#0#HTML" expanded="true" />
+            <element signature="e#94803#94821#0#HTML" expanded="true" />
+            <element signature="e#95116#95141#0#HTML" expanded="true" />
+            <element signature="e#96119#96144#0#HTML" expanded="true" />
+            <element signature="e#96185#96203#0#HTML" expanded="true" />
+            <element signature="e#97203#97226#0#HTML" expanded="true" />
+            <element signature="e#97260#97279#0#HTML" expanded="true" />
+            <element signature="e#97527#97550#0#HTML" expanded="true" />
+            <element signature="e#97579#97598#0#HTML" expanded="true" />
+            <element signature="e#97781#97804#0#HTML" expanded="true" />
+            <element signature="e#97829#97848#0#HTML" expanded="true" />
+            <element signature="e#106628#106659#0#HTML" expanded="true" />
+            <element signature="e#106980#106997#0#HTML" expanded="true" />
+            <element signature="e#107134#107152#0#HTML" expanded="true" />
+            <element signature="e#107447#107472#0#HTML" expanded="true" />
+            <element signature="e#108450#108475#0#HTML" expanded="true" />
+            <element signature="e#108516#108534#0#HTML" expanded="true" />
+            <element signature="e#109534#109557#0#HTML" expanded="true" />
+            <element signature="e#109591#109610#0#HTML" expanded="true" />
+            <element signature="e#109858#109881#0#HTML" expanded="true" />
+            <element signature="e#109910#109929#0#HTML" expanded="true" />
+            <element signature="e#110112#110135#0#HTML" expanded="true" />
+            <element signature="e#110160#110179#0#HTML" expanded="true" />
+            <element signature="e#122317#122344#0#HTML" expanded="true" />
+            <element signature="e#128347#128378#0#HTML" expanded="true" />
+            <element signature="e#128639#128656#0#HTML" expanded="true" />
+            <element signature="e#128773#128791#0#HTML" expanded="true" />
+            <element signature="e#129026#129051#0#HTML" expanded="true" />
+            <element signature="e#129568#129593#0#HTML" expanded="true" />
+            <element signature="e#130905#130922#0#HTML" expanded="true" />
+            <element signature="e#135315#135332#0#HTML" expanded="true" />
+            <element signature="e#135449#135467#0#HTML" expanded="true" />
+            <element signature="e#135702#135727#0#HTML" expanded="true" />
+            <element signature="e#136244#136269#0#HTML" expanded="true" />
+            <element signature="e#137581#137598#0#HTML" expanded="true" />
+            <element signature="e#142080#142125#0#HTML" expanded="true" />
+            <element signature="e#142746#142763#0#HTML" expanded="true" />
+            <element signature="e#147258#147303#0#HTML" expanded="true" />
+            <element signature="e#147924#147941#0#HTML" expanded="true" />
+            <element signature="e#152334#152351#0#HTML" expanded="true" />
+            <element signature="e#152468#152486#0#HTML" expanded="true" />
+            <element signature="e#152721#152746#0#HTML" expanded="true" />
+            <element signature="e#153263#153288#0#HTML" expanded="true" />
+            <element signature="e#154376#154393#0#HTML" expanded="true" />
+            <element signature="e#154510#154528#0#HTML" expanded="true" />
+            <element signature="e#154763#154788#0#HTML" expanded="true" />
+            <element signature="e#155305#155330#0#HTML" expanded="true" />
+            <element signature="e#156642#156659#0#HTML" expanded="true" />
+            <element signature="e#161178#161223#0#HTML" expanded="true" />
+            <element signature="e#161844#161861#0#HTML" expanded="true" />
+            <element signature="e#166351#166396#0#HTML" expanded="true" />
+            <element signature="e#167017#167034#0#HTML" expanded="true" />
+            <element signature="e#171427#171444#0#HTML" expanded="true" />
+            <element signature="e#171561#171579#0#HTML" expanded="true" />
+            <element signature="e#171814#171839#0#HTML" expanded="true" />
+            <element signature="e#172356#172381#0#HTML" expanded="true" />
+            <element signature="e#173693#173710#0#HTML" expanded="true" />
+            <element signature="e#178104#178121#0#HTML" expanded="true" />
+            <element signature="e#178238#178256#0#HTML" expanded="true" />
+            <element signature="e#178491#178516#0#HTML" expanded="true" />
+            <element signature="e#179033#179058#0#HTML" expanded="true" />
+            <element signature="e#180370#180387#0#HTML" expanded="true" />
+            <element signature="e#184781#184798#0#HTML" expanded="true" />
+            <element signature="e#184915#184933#0#HTML" expanded="true" />
+            <element signature="e#185168#185193#0#HTML" expanded="true" />
+            <element signature="e#185710#185735#0#HTML" expanded="true" />
+            <element signature="e#187047#187064#0#HTML" expanded="true" />
+            <element signature="e#191621#191666#0#HTML" expanded="true" />
+            <element signature="e#192287#192304#0#HTML" expanded="true" />
+            <element signature="e#196873#196900#0#HTML" expanded="true" />
+            <element signature="e#197649#197672#0#HTML" expanded="true" />
+            <element signature="e#203192#203215#0#HTML" expanded="true" />
+            <element signature="e#207505#207528#0#HTML" expanded="true" />
+            <element signature="e#211402#211420#0#HTML" expanded="true" />
+            <element signature="e#212013#212031#0#HTML" expanded="true" />
+            <element signature="e#212615#212633#0#HTML" expanded="true" />
+            <element signature="e#213234#213252#0#HTML" expanded="true" />
+            <element signature="e#213853#213871#0#HTML" expanded="true" />
+            <element signature="e#214469#214487#0#HTML" expanded="true" />
+            <element signature="e#301138#301197#0#HTML" expanded="true" />
+            <element signature="e#307398#307433#0#HTML" expanded="true" />
+            <element signature="e#308345#308392#0#HTML" expanded="true" />
+            <element signature="e#309019#309054#0#HTML" expanded="true" />
+            <element signature="e#309670#309717#0#HTML" expanded="true" />
+            <element signature="e#374272#374298#0#HTML" expanded="true" />
+            <element signature="e#374395#374414#0#HTML" expanded="true" />
+            <element signature="e#374626#374645#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2963#2985#0#HTML" expanded="true" />
+            <element signature="e#3430#3448#0#HTML" expanded="true" />
+            <element signature="e#4708#4732#0#HTML" expanded="true" />
+            <element signature="e#5146#5165#0#HTML" expanded="true" />
+            <element signature="e#5553#5572#0#HTML" expanded="true" />
+            <element signature="e#5958#5977#0#HTML" expanded="true" />
+            <element signature="e#6363#6382#0#HTML" expanded="true" />
+            <element signature="e#6768#6785#0#HTML" expanded="true" />
+            <element signature="e#7794#7816#0#HTML" expanded="true" />
+            <element signature="e#8498#8539#0#HTML" expanded="true" />
+            <element signature="e#16755#16773#0#HTML" expanded="true" />
+            <element signature="e#18581#18599#0#HTML" expanded="true" />
+            <element signature="e#19337#19359#0#HTML" expanded="true" />
+            <element signature="e#21414#21432#0#HTML" expanded="true" />
+            <element signature="e#22432#22454#0#HTML" expanded="true" />
+            <element signature="e#23057#23075#0#HTML" expanded="true" />
+            <element signature="e#24067#24089#0#HTML" expanded="true" />
+            <element signature="e#25117#25144#0#HTML" expanded="true" />
+            <element signature="e#27263#27281#0#HTML" expanded="true" />
+            <element signature="e#29113#29131#0#HTML" expanded="true" />
+            <element signature="e#31285#31303#0#HTML" expanded="true" />
+            <element signature="e#32165#32187#0#HTML" expanded="true" />
+            <element signature="e#32773#32791#0#HTML" expanded="true" />
+            <element signature="e#33653#33675#0#HTML" expanded="true" />
+            <element signature="e#34261#34279#0#HTML" expanded="true" />
+            <element signature="e#35141#35163#0#HTML" expanded="true" />
+            <element signature="e#35364#35391#0#HTML" expanded="true" />
+            <element signature="e#39078#39096#0#HTML" expanded="true" />
+            <element signature="e#40288#40306#0#HTML" expanded="true" />
+            <element signature="e#41054#41076#0#HTML" expanded="true" />
+            <element signature="e#41981#41999#0#HTML" expanded="true" />
+            <element signature="e#42750#42772#0#HTML" expanded="true" />
+            <element signature="e#43683#43701#0#HTML" expanded="true" />
+            <element signature="e#44460#44482#0#HTML" expanded="true" />
+            <element signature="e#45376#45394#0#HTML" expanded="true" />
+            <element signature="e#46138#46160#0#HTML" expanded="true" />
+            <element signature="e#47060#47078#0#HTML" expanded="true" />
+            <element signature="e#47829#47851#0#HTML" expanded="true" />
+            <element signature="e#48950#48977#0#HTML" expanded="true" />
+            <element signature="e#50681#50703#0#HTML" expanded="true" />
+            <element signature="e#51598#51620#0#HTML" expanded="true" />
+            <element signature="e#52515#52537#0#HTML" expanded="true" />
+            <element signature="e#53432#53454#0#HTML" expanded="true" />
+            <element signature="e#54349#54371#0#HTML" expanded="true" />
+            <element signature="e#54571#54598#0#HTML" expanded="true" />
+            <element signature="e#54793#54820#0#HTML" expanded="true" />
+            <element signature="e#74410#74437#0#HTML" expanded="true" />
+            <element signature="e#75439#75464#0#HTML" expanded="true" />
+            <element signature="e#76510#76537#0#HTML" expanded="true" />
+            <element signature="e#107630#107648#0#HTML" expanded="true" />
+            <element signature="e#108936#108954#0#HTML" expanded="true" />
+            <element signature="e#110237#110255#0#HTML" expanded="true" />
+            <element signature="e#112033#112051#0#HTML" expanded="true" />
+            <element signature="e#113337#113355#0#HTML" expanded="true" />
+            <element signature="e#114584#114602#0#HTML" expanded="true" />
+            <element signature="e#116276#116294#0#HTML" expanded="true" />
+            <element signature="e#118245#118263#0#HTML" expanded="true" />
+            <element signature="e#122919#122937#0#HTML" expanded="true" />
+            <element signature="e#123320#123355#0#HTML" expanded="true" />
+            <element signature="e#124323#124370#0#HTML" expanded="true" />
+            <element signature="e#125246#125264#0#HTML" expanded="true" />
+            <element signature="e#126693#126711#0#HTML" expanded="true" />
+            <element signature="e#127981#127999#0#HTML" expanded="true" />
+            <element signature="e#134635#134653#0#HTML" expanded="true" />
+            <element signature="e#136724#136742#0#HTML" expanded="true" />
+            <element signature="e#137825#137843#0#HTML" expanded="true" />
+            <element signature="e#139137#139155#0#HTML" expanded="true" />
+            <element signature="e#140844#140862#0#HTML" expanded="true" />
+            <element signature="e#145130#145148#0#HTML" expanded="true" />
+            <element signature="e#146493#146511#0#HTML" expanded="true" />
+            <element signature="e#148727#148745#0#HTML" expanded="true" />
+            <element signature="e#150115#150133#0#HTML" expanded="true" />
+            <element signature="e#151757#151775#0#HTML" expanded="true" />
+            <element signature="e#157001#157019#0#HTML" expanded="true" />
+            <element signature="e#158834#158852#0#HTML" expanded="true" />
+            <element signature="e#160658#160676#0#HTML" expanded="true" />
+            <element signature="e#161075#161110#0#HTML" expanded="true" />
+            <element signature="e#162098#162145#0#HTML" expanded="true" />
+            <element signature="e#163078#163096#0#HTML" expanded="true" />
+            <element signature="e#181719#181746#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/project.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#28958#28978#0#HTML" expanded="false" />
+            <element signature="e#47100#47122#0#HTML" expanded="false" />
+            <element signature="e#49009#49031#0#HTML" expanded="false" />
+            <element signature="e#78835#78857#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/view-profile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3250#3273#0#HTML" expanded="false" />
+            <element signature="e#3417#3435#0#HTML" expanded="false" />
+            <element signature="e#4400#4419#0#HTML" expanded="false" />
+            <element signature="e#4744#4763#0#HTML" expanded="false" />
+            <element signature="e#5368#5385#0#HTML" expanded="false" />
+            <element signature="e#10296#10326#0#HTML" expanded="false" />
+            <element signature="e#29217#29263#0#HTML" expanded="false" />
+            <element signature="e#43098#43125#0#HTML" expanded="false" />
+            <element signature="e#62677#62709#0#HTML" expanded="false" />
+            <element signature="e#62950#62972#0#HTML" expanded="false" />
+            <element signature="e#67755#67771#0#HTML" expanded="false" />
+            <element signature="e#67867#67889#0#HTML" expanded="false" />
+            <element signature="e#72755#72777#0#HTML" expanded="false" />
+            <element signature="e#78429#78456#0#HTML" expanded="false" />
+            <element signature="e#84456#84487#0#HTML" expanded="false" />
+            <element signature="e#84748#84765#0#HTML" expanded="false" />
+            <element signature="e#84882#84900#0#HTML" expanded="false" />
+            <element signature="e#85135#85160#0#HTML" expanded="false" />
+            <element signature="e#85677#85702#0#HTML" expanded="false" />
+            <element signature="e#87014#87031#0#HTML" expanded="false" />
+            <element signature="e#91424#91441#0#HTML" expanded="false" />
+            <element signature="e#91558#91576#0#HTML" expanded="false" />
+            <element signature="e#91811#91836#0#HTML" expanded="false" />
+            <element signature="e#92353#92378#0#HTML" expanded="false" />
+            <element signature="e#93690#93707#0#HTML" expanded="false" />
+            <element signature="e#98189#98234#0#HTML" expanded="false" />
+            <element signature="e#98855#98872#0#HTML" expanded="false" />
+            <element signature="e#103367#103412#0#HTML" expanded="false" />
+            <element signature="e#104033#104050#0#HTML" expanded="false" />
+            <element signature="e#108443#108460#0#HTML" expanded="false" />
+            <element signature="e#108577#108595#0#HTML" expanded="false" />
+            <element signature="e#108830#108855#0#HTML" expanded="false" />
+            <element signature="e#109372#109397#0#HTML" expanded="false" />
+            <element signature="e#110485#110502#0#HTML" expanded="false" />
+            <element signature="e#110619#110637#0#HTML" expanded="false" />
+            <element signature="e#110872#110897#0#HTML" expanded="false" />
+            <element signature="e#111414#111439#0#HTML" expanded="false" />
+            <element signature="e#112751#112768#0#HTML" expanded="false" />
+            <element signature="e#117287#117332#0#HTML" expanded="false" />
+            <element signature="e#117953#117970#0#HTML" expanded="false" />
+            <element signature="e#122460#122505#0#HTML" expanded="false" />
+            <element signature="e#123126#123143#0#HTML" expanded="false" />
+            <element signature="e#127536#127553#0#HTML" expanded="false" />
+            <element signature="e#127670#127688#0#HTML" expanded="false" />
+            <element signature="e#127923#127948#0#HTML" expanded="false" />
+            <element signature="e#128465#128490#0#HTML" expanded="false" />
+            <element signature="e#129802#129819#0#HTML" expanded="false" />
+            <element signature="e#134213#134230#0#HTML" expanded="false" />
+            <element signature="e#134347#134365#0#HTML" expanded="false" />
+            <element signature="e#134600#134625#0#HTML" expanded="false" />
+            <element signature="e#135142#135167#0#HTML" expanded="false" />
+            <element signature="e#136479#136496#0#HTML" expanded="false" />
+            <element signature="e#140890#140907#0#HTML" expanded="false" />
+            <element signature="e#141024#141042#0#HTML" expanded="false" />
+            <element signature="e#141277#141302#0#HTML" expanded="false" />
+            <element signature="e#141819#141844#0#HTML" expanded="false" />
+            <element signature="e#143156#143173#0#HTML" expanded="false" />
+            <element signature="e#147730#147775#0#HTML" expanded="false" />
+            <element signature="e#148396#148413#0#HTML" expanded="false" />
+            <element signature="e#152982#153009#0#HTML" expanded="false" />
+            <element signature="e#153602#153649#0#HTML" expanded="false" />
+            <element signature="e#153798#153828#0#HTML" expanded="false" />
+            <element signature="e#154356#154386#0#HTML" expanded="false" />
+            <element signature="e#154915#154945#0#HTML" expanded="false" />
+            <element signature="e#155471#155501#0#HTML" expanded="false" />
+            <element signature="e#156025#156055#0#HTML" expanded="false" />
+            <element signature="e#156591#156621#0#HTML" expanded="false" />
+            <element signature="e#157148#157178#0#HTML" expanded="false" />
+            <element signature="e#157712#157742#0#HTML" expanded="false" />
+            <element signature="e#158276#158306#0#HTML" expanded="false" />
+            <element signature="e#158857#158887#0#HTML" expanded="false" />
+            <element signature="e#159470#159500#0#HTML" expanded="false" />
+            <element signature="e#160053#160076#0#HTML" expanded="false" />
+            <element signature="e#164366#164389#0#HTML" expanded="false" />
+            <element signature="e#168169#168210#0#HTML" expanded="false" />
+            <element signature="e#168390#168408#0#HTML" expanded="false" />
+            <element signature="e#168892#168933#0#HTML" expanded="false" />
+            <element signature="e#169113#169131#0#HTML" expanded="false" />
+            <element signature="e#169604#169645#0#HTML" expanded="false" />
+            <element signature="e#169825#169843#0#HTML" expanded="false" />
+            <element signature="e#170333#170374#0#HTML" expanded="false" />
+            <element signature="e#170554#170572#0#HTML" expanded="false" />
+            <element signature="e#171062#171103#0#HTML" expanded="false" />
+            <element signature="e#171283#171301#0#HTML" expanded="false" />
+            <element signature="e#171788#171829#0#HTML" expanded="false" />
+            <element signature="e#172009#172027#0#HTML" expanded="false" />
+            <element signature="e#253122#253181#0#HTML" expanded="false" />
+            <element signature="e#261046#261081#0#HTML" expanded="false" />
+            <element signature="e#262089#262136#0#HTML" expanded="false" />
+            <element signature="e#262891#262926#0#HTML" expanded="false" />
+            <element signature="e#263606#263653#0#HTML" expanded="false" />
+            <element signature="e#340384#340410#0#HTML" expanded="false" />
+            <element signature="e#340523#340542#0#HTML" expanded="false" />
+            <element signature="e#340786#340805#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/editjob.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#option#0;n#select#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#2;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#3;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#4;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#5;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#6;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#7;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#8;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#8;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#9;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#9;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#10;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#11;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#11;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#12;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#12;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#13;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#14;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#14;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#15;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#1;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#2;n#div#0;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#1;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#2;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#3;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#4;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#5;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#label#0;n#div#6;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.461538">
+          <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="17.807692">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#23#63#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/include/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.884615">
+          <caret line="1520" column="12" selection-start-line="1520" selection-start-column="12" selection-end-line="1520" selection-end-column="12" />
+          <folding>
+            <marker date="1596883968486" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1596883968486" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1596883968486" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/include/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="83" column="117" selection-start-line="83" selection-start-column="117" selection-end-line="83" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/recruiter/candidate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/jobseeker/Jobs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="1841" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/my-job.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="45" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../beta/beta/czCRM/jobseeker/searchjob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1778" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/view-profile.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/search.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/include/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.268431">
-          <caret line="1216" column="36" selection-start-line="1216" selection-start-column="36" selection-end-line="1216" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1923077">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_04_122840_create_job_seeker_posts_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45698926">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/JobSeekerPost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33512545">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/register/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45698926">
-          <caret line="135" column="73" selection-start-line="135" selection-start-column="73" selection-end-line="135" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70071685">
-          <caret line="81" column="35" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/freelancer/include/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2">
-          <caret line="729" column="37" selection-start-line="729" selection-start-column="7" selection-end-line="729" selection-end-column="37" />
+        <state vertical-scroll-proportion="-0.018518519">
+          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.730769">
-          <caret line="34" column="70" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="70" />
+        <state vertical-scroll-proportion="-9.038462">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/job-seeker.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/view-profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.163636">
-          <caret line="1473" column="58" selection-start-line="1473" selection-start-column="58" selection-end-line="1473" selection-end-column="58" />
+        <state vertical-scroll-proportion="-14.653846">
+          <caret line="784" column="0" selection-start-line="784" selection-start-column="0" selection-end-line="784" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/RecruiterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-34.192307">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <element signature="e#123937#128460#0#HTML" expanded="false" />
-            <element signature="e#128637#130425#0#HTML" expanded="false" />
-            <element signature="e#130670#132460#0#HTML" expanded="false" />
-            <element signature="e#132582#135717#0#HTML" expanded="false" />
-            <element signature="e#353090#354887#0#HTML" expanded="false" />
-            <element signature="e#357308#357358#0#HTML" expanded="true" />
-            <element signature="e#358266#360589#0#HTML" expanded="false" />
-            <element signature="e#360652#377195#0#HTML" expanded="false" />
+            <element signature="e#44#72#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_06_091233_create_user_post_feeds_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.961538">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_05_062102_create_job_seeker_profiles_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.40925926">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/FreelancerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_08_093831_create_post_jobadds_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="e#7#45#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_08_094037_create_user_postfeedcomments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_08_094105_create_user_postfeedlikes_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_08_08_094205_create_user_postfeedshares_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12592593">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/register/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/UserPostFeed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22962964">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/JobseekerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.55376345">
-          <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+        <state vertical-scroll-proportion="-15.038462">
+          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
           <folding>
-            <element signature="e#44#73#0#PHP" expanded="true" />
+            <element signature="e#44#81#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/template/CRM/job/job-seeker.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6320939">
+          <caret line="955" column="94" selection-start-line="955" selection-start-column="90" selection-end-line="955" selection-end-column="94" />
+          <folding />
         </state>
       </provider>
     </entry>

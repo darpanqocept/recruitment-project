@@ -38,7 +38,7 @@
                                 </div>
                                 <h2 class="font-semibold mgbt-xs-5">Mariah Caraiban</h2>
                                 <h4>Education Counsultatnt</h4>
-                                <p>Education Social Worker with 18 years of experience. I primarily work with students in 6th-8th grade with social, emotional, adaptive, and other difficulties that may impact one’s ability to succeed personally and academically. Proficient in DBT, crisis management, RtI/MTSS.</p>
+                                <p>Education Social Worker with 18 years of experience. I primarily work with students in 6th-8th grade with social, emotional, adaptive, and other difficulties that may impact one?s ability to succeed personally and academically. Proficient in DBT, crisis management, RtI/MTSS.</p>
                                 <div class="mgtp-20">
                                     <table class="table table-striped table-hover" style="font-size: 14px" >
                                         <tbody>
