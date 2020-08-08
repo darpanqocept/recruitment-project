@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -39,19 +40,19 @@ class User extends Authenticatable
 
     protected $table='users';
 
-    public function posts()
-    {
-        return $this->hasMany('App\Models\UserPostFeed');
+     public function posts()
+     {
+         return $this->hasMany('App\Models\UserPostFeed');
     }
 
 // user can have many comments as well
 
     public function comments()
     {
-        return $this->hasMany('App\Models\UserPostfeedcomment');
+      return $this->hasMany('App\Models\UserPostfeedcomment');
     }
-    public function likes()
+     public function likes()
     {
-        return $this->hasOne('App\Models\UserPostfeedlike');
+      return $this->hasOne('App\Models\UserPostfeedlike');
     }
 }

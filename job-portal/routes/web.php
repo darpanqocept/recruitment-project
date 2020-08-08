@@ -21,6 +21,11 @@ Route::match(['get','post'],'/',['as'=>'web.home.index','uses'=>'Web\HomeControl
 Route::match(['get','post'],'/login',['as'=>'web.home.loginDisplay','uses'=>'Web\HomeController@loginDisplay']);
 Route::match(['get','post'],'/register',['as'=>'web.home.userRegister','uses'=>'Web\HomeController@userRegister']);
 Route::match(['get','post'],'/loginUser',['as'=>'web.home.loginUser','uses'=>'Web\HomeController@loginUser']);
+
+/*--recruiter login------*/
+Route::match(['get','post'],'/recloginUser',['as'=>'web.home.recloginUser','uses'=>'Web\HomeController@recloginUser']);
+/*--end recruiter login------*/
+
 Route::match(['get','post'],'/logout',['as'=>'web.home.logoutUser','uses'=>'Web\HomeController@logoutUser']);
 /*login*/
 
@@ -31,11 +36,8 @@ Route::match(['get','post'],'/jobseeker/profile/view',['as'=>'web.job.profileVie
 Route::match(['get','post'],'/jobseeker/myjob',['as'=>'web.job.myJob','uses'=>'Web\JobseekerController@myJob']);
 Route::match(['get','post'],'/jobseeker/search',['as'=>'web.job.searchJob','uses'=>'Web\JobseekerController@searchJob']);
 
-Route::match(['get','post'],'/jobseeker/editprofile',['as'=>'web.job.editProfile','uses'=>'Web\JobseekerController@editProfile']);
-
 
 Route::match(['get','post'],'/jobseeker/post',['as'=>'web.job.postFeed','uses'=>'Web\JobseekerController@postFeed']);
-Route::match(['get','post'],'/jobseeker/info',['as'=>'web.job.personalInfo','uses'=>'Web\JobseekerController@personalInfo']);
 /*job seeker*/
 
 /*Recruiter*/
@@ -46,16 +48,24 @@ Route::match(['get','post'],'/recruiter/profile/view',['as'=>'web.recruiter.prof
 Route::match(['get','post'],'/recruiter/myjob',['as'=>'web.recruiter.my-job','uses'=>'Web\RecruiterController@myJob']);
 Route::match(['get','post'],'/recruiter/candidate',['as'=>'web.recruiter.allCandidates','uses'=>'Web\recruiterController@allCandidates']);
 Route::match(['get','post'],'/recruiter/project',['as'=>'web.recruiter.myProjects','uses'=>'Web\RecruiterController@myProjects']);
+Route::match(['get','post'],'/recruiter/project',['as'=>'web.recruiter.postFeed','uses'=>'Web\RecruiterController@addpostFeed']);
 
-/*Recruiter*/
-/*--recruiter login------*/
-Route::match(['get','post'],'/recloginUser',['as'=>'web.home.recloginUser','uses'=>'Web\HomeController@recloginUser']);
 Route::match(['get','post'],'/recruiter/likefeed/{id}',['as'=>'web.recruiter.likefeed','uses'=>'Web\RecruiterController@likepostFeed']);
+
+
+
 Route::match(['get','post'],'/recruiter/postFeedcomment/{id}',['as'=>'web.recruiter.postFeedcomment','uses'=>'Web\RecruiterController@commentpostFeed']);
 Route::match(['get','post'],'/recruiter/postJob',['as'=>'web.recruiter.postJob','uses'=>'Web\RecruiterController@postJobdata']);
+
 Route::match(['get','post'],'/recruiter/editjob/{id}',['as'=>'web.recruiter.editjob','uses'=>'Web\RecruiterController@editjobdata']);
+
 Route::match(['get','post'],'/recruiter/editpostJob/{id}',['as'=>'web.recruiter.editpostJob','uses'=>'Web\RecruiterController@editpostdata']);
-/*--end recruiter login------*/
+
+
+//Route::get('/like/{id}', 'MainController@likepost')->name('like');
+
+
+/*Recruiter*/
 
 /*Freelancer*/
 Route::match(['get','post'],'/freelancer',['as'=>'web.freelancer.index','uses'=>'Web\FreelancerController@index']);

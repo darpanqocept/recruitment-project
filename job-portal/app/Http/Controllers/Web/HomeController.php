@@ -56,58 +56,26 @@ class HomeController extends Controller
     }
 
     public function loginUser(Request $request)
-    {
-        /*$this->validate($request,[
-            'email'=>'required',
-            'user_type'=>'required',
-            'password'=>'required|same:confirmpass',
-        ]);*/
-        //dd($request->all()); exit();
+    {        
         $email = $request->input('email');
         $password =$request->input('password');
-        //$user_type =$request->input('user_type');
-        if (Auth::guard()->attempt((['email' => $email,'password' => $password])))
+        if (Auth::guard()->attempt((['email' => $email, 'password' => $password])))
         {
-            //if($user_type == 'Job-Seeker')
             if(Auth::guard()->user()->user_type==1)
             {
                 Session::flash('msg','You Redirect On Job Seeker Dashboard');
-                return redirect()->route('web.job.profilePage');
+                return redirect()->route('web.job.index');
             }
-           // elseif($user_type == "Recruiter")
             elseif(Auth::guard()->user()->user_type==2)
             {
                 Session::flash('msg','You Redirect On Recruiter Dashboard');
                return redirect()->route('web.recruiter.index');
             }
-            else{
+            else
+            {
                 Session::flash('msg','You Redirect On Freelancer Dashboard');
                 return redirect()->route('web.freelancer.index');
             }
-            return redirect()->route('web.home.index');
-        }else
-        {
-            Session::flash('danger','Please Check Your Credentials');
-            return redirect()->route('web.home.loginDisplay');
-        }
-    }
-
-    public function recloginUser(Request $request)
-    {
-        $email = $request->input('rec_email');
-        $password =$request->input('rec_password');
-        if (Auth::guard()->attempt((['email' => $email, 'password' => $password])))
-        {
-            if(Auth::guard()->user()->user_type==2)
-            {
-                Session::flash('msg','You Redirect On Recruiter Dashboard');
-                return redirect()->route('web.recruiter.index');
-            }
-            else {
-                Session::flash('danger', 'Login Fail, please check email id!');
-                return back();
-            }
-
             return redirect()->route('web.home.index');
         }
         else
@@ -116,6 +84,34 @@ class HomeController extends Controller
             return redirect()->route('web.home.loginDisplay');
         }
     }
+
+     public function recloginUser(Request $request)
+    {        
+        $email = $request->input('rec_email');
+        $password =$request->input('rec_password');
+        if (Auth::guard()->attempt((['email' => $email, 'password' => $password])))
+        {
+           if(Auth::guard()->user()->user_type==2)
+            {
+                Session::flash('msg','You Redirect On Recruiter Dashboard');
+               return redirect()->route('web.recruiter.index');
+            }
+            else {
+                Session::flash('danger', 'Login Fail, please check email id!');
+             return back(); 
+            }
+           
+            return redirect()->route('web.home.index');
+        }
+        else
+        {
+            Session::flash('danger','Please Check Your Credentials');
+            return redirect()->route('web.home.loginDisplay');
+        }
+    }
+
+
+    
 
     public function logoutUser()
     {

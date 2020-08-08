@@ -1928,7 +1928,7 @@
                                                                         <select  id="curr" name="degree_type_id"><option value="" selected="selected">?</option>
 
                                                                             <option value="3">$</option>
-                                                                            <option value="4">?</option>
+                                                                            <option value="4">€</option>
 
 
                                                                         </select>

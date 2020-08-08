@@ -10,17 +10,17 @@ class UserPostfeedlike extends Model
 {
     protected $table = 'userpostfeedlike';
 
-    protected $fillable = [
+     protected $fillable = [
         'id','user_id','user_post_feed_id','created_at','updated_at','deleted_at'
     ];
 
-    protected $casts = [
-        'id' => 'int',
-        'user_id' => 'int',
-        'user_post_feed_id' => 'int',
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
-        'deleted_at' => 'datetime',
+     protected $casts = [
+    	 'id' => 'int',
+         'user_id' => 'int',
+         'user_post_feed_id' => 'int', 
+          'created_at' => 'datetime',
+         'updated_at' => 'datetime', 
+         'deleted_at' => 'datetime',        
     ];
 
     public function post()
@@ -32,6 +32,6 @@ class UserPostfeedlike extends Model
         return $this->belongsTo('App\User');
     }
 
-
+   
 
 }

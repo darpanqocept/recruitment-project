@@ -8,12 +8,12 @@ class UserType extends Model
 {
     protected $table = 'usertype';
 
-    protected $fillable = [
+     protected $fillable = [
         'id','name'
     ];
 
-    protected $casts = [
-        'id' => 'int',
-        'name' => 'string'
+     protected $casts = [
+    	 'id' => 'int',
+         'name' => 'string'        
     ];
 }

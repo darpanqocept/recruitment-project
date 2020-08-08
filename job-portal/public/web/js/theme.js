@@ -89,7 +89,7 @@ jQuery(document).ready(function($)
 				   Used: For future development */		
 				$('[data-action^="backtop"]').click(function(e){
 						e.preventDefault();
-						$('body,html').animate({scrollTop:0},800);
+						//$('body,html').animate({scrollTop:0},800);
 				});		
 				
 		

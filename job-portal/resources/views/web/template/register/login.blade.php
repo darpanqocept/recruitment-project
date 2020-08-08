@@ -99,56 +99,156 @@
     <!-- Header Start -->
 
     <!-- Header Ends -->
-    <div class="content">
+   <!-- Header Ends --> 
+<div class="content">
+  <div style="text-align:right" >
 
-        <div class="container">
+    <button class="btn vd_bg-green vd_white " type="submit" id="login-submit"  onClick="document.location.href='http://cephzonecrm.com/login.html'"  >Company Registration</button>
+</div>
+  <div class="container"> 
 
 
-            <div class=" col-md-1 content-wrapper">
+       
 
+        <div class=" col-md-4 content-wrapper"><br><br>
+      <div class="container">
+        <div class="content clearfix">
+          <div class="content-section clearfix">
+            <div class="login-page">
+              <div class="heading clearfix">
+                <div class="logo">
+                  <h2 class="mgbt-xs-5"></h2>
+                </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+              </div>
+              <div class="panel widget">
+                <div class="panel-body">
+                                  <div class="register-panel text-center font-semibold"> Already Have an Account? <br/>
+ </div>
+                <h4 class="text-center font-semibold vd_grey"> USER LOGIN</h4>                        
+                  <!--<div class="login-icon entypo-icon"> -->
+                  <!--<i class="icon-key"></i> -->
+                  
+                  <!--</div>-->
+                  <form class="form-horizontal" id="login-form" action="#" role="form">
+                  <div class="alert alert-danger vd_hidden">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
+                    <span class="vd_alert-icon"><i class="fa fa-exclamation-circle vd_red"></i></span><strong>Oh snap!</strong> Change a few things up and try submitting again. </div>
+                  <div class="alert alert-success vd_hidden">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
+                    <span class="vd_alert-icon"><i class="fa fa-check-circle vd_green"></i></span><strong>Well done!</strong>. </div>                  
+                    <div class="form-group  mgbt-xs-20">
+                      <div class="col-md-12">
+                        <div class="label-wrapper sr-only">
+                          <label class="control-label" for="email">Email</label>
+                        </div>
+                        <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon"> <i class="fa fa-envelope"></i> </span>
+                          <input type="email" placeholder="Email" id="email" name="email" class="required" value=" tsdsingh@gmail.com" required>
+                        </div>
+                        <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon">  </span>
+                        <select id="cars" class="required" style="background-color:gainsboro">
+  <option value="volvo">Select User Type</option>
+  <option value="volvo">Job Seeker</option>
+  <option value="saab">Recruiter</option>
+  <option value="mercedes">Freelancer</option>
+
+</select>
+
+                        
+                        
+                        </div>
+                        
+                        <div class="label-wrapper">
+                          <label class="control-label sr-only" for="password">Password</label>
+                        </div>
+                        <div class="vd_input-wrapper" id="password-input-wrapper" > <span class="menu-icon"> <i class="fa fa-lock"></i> </span>
+                          <input type="password" placeholder="Password" id="password" name="password" class="required" value="  demo" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="vd_login-error" class="alert alert-danger hidden"><i class="fa fa-exclamation-circle fa-fw"></i> Please fill the necessary field </div>
+                    <div class="form-group">
+                        
+                        <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-xs-6">
+                            <div class="vd_checkbox">
+                              <input type="checkbox" id="checkbox-1" value="1">
+                              <label for="checkbox-1"> Remember me</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-6 text-right">
+                            <div class=""> <a href="pages-forget-password.html">Forget Password? </a> </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12 text-center mgbt-xs-5">
+                        <button class="btn vd_bg-green vd_white width-100" type="submit" id="login-submit"  onClick="document.location.href='index.php'"  >Login</button>
+                      </div>
+                      
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- Panel Widget -->
+<!--               <div class="register-panel text-center font-semibold"> <a href="pages-register.html">CREATE AN ACCOUNT<span class="menu-icon"><i class="fa fa-angle-double-right fa-fw"></i></span></a> </div> -->
             </div>
-
-            <div class=" col-md-1 content-wrapper">
-
-            </div>
-
-            <div class=" col-md-4 content-wrapper"><br><br>
-                <div class="container">
-                    <div class="content clearfix">
-                        <div class="content-section clearfix">
-                            <div class="login-page">
-                                <div class="heading clearfix">
-                                    <div class="logo">
-                                        <h2 class="mgbt-xs-5"></h2>
-                                    </div>
-                                    <img src="http://beta1.cephzonecrm.com/cephzone.png" style="height:263px ; text-align:center" alt="logo">
-
+            <!-- vd_login-page --> 
+            
+          </div>
+          <!-- .vd_content-section --> 
+          
+        </div>
+        <!-- .vd_content --> 
+      </div>
+      <!-- .vd_container --> 
+    </div>
+    <div class=" col-md-4 content-wrapper"><br><br>
+      <div class="container">
+        <div class="content clearfix">
+          <div class="content-section clearfix">
+            <div class="login-page">
+              <div class="heading clearfix">
+                <div class="logo">
+                  <h2 class="mgbt-xs-5"></h2>
+                </div>
+                <img src="http://beta1.cephzonecrm.com/cephzone.png" style="height:263px ; text-align:center" alt="logo">
+<br><br>
+              </div>
+              <div class="panel widget">
+                <div class="panel-body">
+                                  <div class="register-panel text-center font-semibold"> Already Have an Account? <br/>
+ </div>
+                <h4 class="text-center font-semibold vd_grey"> ICHP LOGIN</h4>                        
+                  <!--<div class="login-icon entypo-icon"> -->
+                  <!--<i class="icon-key"></i> -->
+                  
+                  <!--</div>-->
+                 @if($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                         @if (Session::has('success'))
+                                <div class="alert alert-success text-center">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                    <p>{{ Session::get('success') }}</p>
                                 </div>
-                                <div class="panel widget">
-                                    <div class="panel-body">
-                                        <div class="register-panel text-center font-semibold"> Already Have an Account? <br/>
-                                        </div>
-                                        <h4 class="text-center font-semibold vd_grey"> USER LOGIN</h4>
-                                        <!--<div class="login-icon entypo-icon"> -->
-                                        <!--<i class="icon-key"></i> -->
-
-                                        <!--</div>-->
-                                        @if ($message = Session::get('msg'))
-                                            <div class="alert alert-success alert-block">
-                                                <button type="button" class="close" data-dismiss="alert">?</button>
-                                                <strong>{{ $message }}</strong>
-                                            </div>
-                                        @endif
-                                        @if (count($errors) > 0)
-                                            <div class="alert alert-danger">
-                                                <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                        @endif
-                                        <form class="form-horizontal"  action="{{route('web.home.loginUser')}}" method="post" role="form">
+                            @endif                          
+                          @if (Session::has('danger'))
+                                <div class="alert alert-danger text-center">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                    <p>{{ Session::get('danger') }}</p>
+                                </div>
+                            @endif  
+                                        <form class="form-horizontal"  action="{{route('web.home.recloginUser')}}" method="post" role="form">
                                             {{csrf_field()}}
                                             <div class="alert alert-danger vd_hidden">
                                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
@@ -162,14 +262,14 @@
                                                         <label class="control-label" for="email">Email</label>
                                                     </div>
                                                     <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon"> <i class="fa fa-envelope"></i> </span>
-                                                        <input type="email" placeholder="Email" id="email" name="email" class="required" required>
-                                                    </div>
+                                                        <input type="email" placeholder="Email" id="rec_email" name="rec_email" class="required" required>
+                                                    </div> 
                                                     <div class="label-wrapper">
                                                         <label class="control-label sr-only" for="password">Password</label>
                                                     </div>
                                                     <div class="vd_input-wrapper" id="password-input-wrapper" > <span class="menu-icon"> <i class="fa fa-lock"></i> </span>
-                                                        <input type="password" placeholder="Password" id="password" name="password" class="required"  required>
-                                                    </div>
+                                                        <input type="password" placeholder="Password" id="rec_password" name="rec_password" class="required"  required>
+                                                    </div>            
                                                 </div>
                                             </div>
                                             <div id="vd_login-error" class="alert alert-danger hidden"><i class="fa fa-exclamation-circle fa-fw"></i> Please fill the necessary field </div>
@@ -196,240 +296,289 @@
 
                                             </div>
                                         </form>
-                                    </div>
-                                </div>
-                                <!-- Panel Widget -->
-                                <!--               <div class="register-panel text-center font-semibold"> <a href="pages-register.html">CREATE AN ACCOUNT<span class="menu-icon"><i class="fa fa-angle-double-right fa-fw"></i></span></a> </div> -->
-                            </div>
-                            <!-- vd_login-page -->
-
-                        </div>
-                        <!-- .vd_content-section -->
-
-                    </div>
-                    <!-- .vd_content -->
                 </div>
-                <!-- .vd_container -->
+              </div>
+              <!-- Panel Widget -->
+<!--               <div class="register-panel text-center font-semibold"> <a href="pages-register.html">CREATE AN ACCOUNT<span class="menu-icon"><i class="fa fa-angle-double-right fa-fw"></i></span></a> </div> -->
             </div>
-
-
-            <!-- Middle Content Start -->
-
-            <div class=" col-md-4  content-wrapper" >
-                <div class="container">
-                    <style>
-
-                        .tooltip-inner {
-                            min-width: 150px; /* the minimum width */
-                        }
-
-                        .error{
-                            color:red;
-                        }
-
-
-                    </style>
-                    <div class="content clearfix">
-                        <div class="content-section clearfix">
-                            <div class="register-page">
-                                <div class="heading clearfix">
-                                    <div class="logo">
-                                        <h2 class="mgbt-xs-5"></h2>
-                                    </div>
-
-                                </div>
-                                <div class="panel widget">
-                                    <div class="panel-body">
-                                        <h4 class="text-center font-semibold vd_grey">USER REGISTRATION</h4><div id="register-success" class="alert alert-success" style="display:none;"><i class="fa fa-exclamation-circle fa-fw"></i> Registration confirmation has been sent to your email </div>
-                                        @if ($message = Session::get('success'))
-                                            <div class="alert alert-success alert-block">
-                                                <button type="button" class="close" data-dismiss="alert">?</button>
-                                                <strong>{{ $message }}</strong>
-                                            </div>
-                                        @endif
-                                        @if (count($errors) > 0)
-                                            <div class="alert alert-danger">
-                                                <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                        @endif
-                                        <div id="register-passerror" class="alert alert-danger" style="display:none;"><i class="fa fa-exclamation-circle fa-fw"></i> Your password and Confirm password are not same </div>
-                                        <form class="form-horizontal"  action="{{route('web.home.userRegister')}}" method="post" role="form" >
-                                            {{csrf_field()}}
-                                            <div class="alert alert-danger vd_hidden">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
-                                                <span class="vd_alert-icon"><i class="fa fa-exclamation-circle vd_red"></i></span><strong>Oh snap!</strong> Change a few things up and try submitting again.
-                                            </div>
-                                            <div class="alert alert-warning vd_hidden">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
-                                                <span class="vd_alert-icon"><i class="fa fa-exclamation-circle vd_red"></i></span>Your password and Confirm password are not same
-                                            </div>
-                                            <div class="alert alert-success vd_hidden">
-                                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
-                                                <span class="vd_alert-icon"><i class="fa fa-check-circle vd_green"></i></span>Registration confirmation has been sent to your email.
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-md-12">
-                                                    <div class="label-wrapper">
-                                                        <label class="control-label">User Type <span class="vd_red">*</span></label>
-                                                    </div>
-                                                    <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon">  </span>
-
-                                                        {{--<a data-toggle="tooltip" data-placement="right" title="You can select anyone which defines your profile">
---}}
-                                                        <select id="cars" class="required" style="background-color:gainsboro" name="user_type"   data-placement="right" data-toggle="tooltip">
-                                                            <option value="">Select User Type</option>
-                                                            <option value="Job-Seeker">Job Seeker</option>
-                                                            <option value="Recruiter">Recruiter</option>
-                                                            <option value="Freelancer">Freelancer</option>
-                                                        </select>
-                                                        {{--</a>--}}
-                                                    </div>
-                                                    @if($errors->has('user_type'))
-                                                        <span class="error">{{$errors->first('user_type')}}</span>
-                                                    @endif
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-md-6">
-                                                    <div class="label-wrapper">
-                                                        <label class="control-label">First Name <span class="vd_red">*</span></label>
-                                                    </div>
-                                                    <div class="vd_input-wrapper" id="first-name-input-wrapper"> <span class="menu-icon"> <i class="fa fa-user"></i> </span>
-                                                        <input type="text" placeholder="John" name="first_name" class="required" required name="firstname" id="firstname">
-                                                    </div>
-                                                    @if($errors->has('first_name'))
-                                                        <span class="error">{{$errors->first('first_name')}}</span>
-                                                    @endif
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="label-wrapper">
-                                                        <label class="control-label">Last Name <span class="vd_red">*</span></label>
-                                                    </div>
-                                                    <div class="vd_input-wrapper" id="last-name-input-wrapper"> <span class="menu-icon"> <i class="fa fa-user"></i> </span>
-                                                        <input type="text" placeholder="Doe" name="last_name" class="required" required name="lastname" id="lastname">
-                                                    </div>
-                                                    @if($errors->has('last_name'))
-                                                        <span class="error">{{$errors->first('last_name')}}</span>
-                                                    @endif
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group ">
-                                                <div class="col-md-12">
-                                                    <div class="label-wrapper">
-                                                        <label class="control-label">Phone Number <span class="vd_red">*</span></label>
-                                                    </div>
-                                                    {{--<div class="vd_input-wrapper" id="country-code-input-wrapper"> <span class="menu-icon"> <i class="fa fa-plus"></i> </span>
-                                                        <input type="number" placeholder="Country" class="required" required  name="country" id="country">
-                                                    </div>--}}
-                                                    {{--</div>--}}
-                                                    {{--<div class="col-md-9">--}}
-                                                    {{-- <div class="label-wrapper">
-                                                         <label class="control-label">&nbsp;</label>
-                                                     </div>
-                                                    --}} <div class="vd_input-wrapper no-icon" id="phone-input-wrapper">
-                                                        <input type="number" placeholder="Phone Number" name="phone" class="required" required   id="phone">
-                                                    </div>
-                                                    @if($errors->has('phone'))
-                                                        <span class="error">{{$errors->first('phone')}}</span>
-                                                    @endif
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <div class="col-md-12">
-                                                    <div class="label-wrapper">
-                                                        <label class="control-label">Email <span class="vd_red">*</span></label>
-                                                    </div>
-                                                    <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon"> <i class="fa fa-envelope"></i> </span>
-                                                        <input type="email" placeholder="Email" class="required" required  name="email" id="email">
-                                                    </div>
-                                                    @if($errors->has('email'))
-                                                        <span class="error">{{$errors->first('email')}}</span>
-                                                    @endif
-                                                </div>
-                                            </div>
-
-
-
-
-                                            <div class="form-group">
-                                                <div class="col-md-6">
-                                                    <div class="label-wrapper">
-                                                        <label class="control-label">Password <span class="vd_red">*</span></label>
-                                                    </div>
-                                                    <div class="vd_input-wrapper" id="password-input-wrapper"> <span class="menu-icon"> <i class="fa fa-lock"></i> </span>
-                                                        <input type="password" placeholder="Password" class="required" required  name="password" id="password">
-                                                    </div>
-                                                    @if($errors->has('password'))
-                                                        <span class="error">{{$errors->first('password')}}</span>
-                                                    @endif
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="label-wrapper">
-                                                        <label class="control-label">Confirm Password<span class="vd_red">*</span></label>
-                                                    </div>
-                                                    <div class="vd_input-wrapper" id="confirm-password-input-wrapper"> <span class="menu-icon"> <i class="fa fa-lock"></i> </span>
-                                                        <input type="password" placeholder="Password" class="required" required  name="confirmpass" id="confirmpass">
-                                                    </div>
-                                                    @if($errors->has('confirmpass'))
-                                                        <span class="error">{{$errors->first('confirmpass')}}</span>
-                                                    @endif
-                                                </div>
-                                            </div>
-                                            <div id="vd_login-error" class="alert alert-danger hidden"><i class="fa fa-exclamation-circle fa-fw"></i> Please fill the necessary field </div>
-                                            <div class="form-group">
-                                                <div class="col-md-12 mgbt-xs-10 mgtp-20">
-                                                    <div class="vd_checkbox">
-                                                        <input type="checkbox" id="checkbox-12" value="1">
-                                                        <label for="checkbox-1"> Send me newsletter about the latest update</label>
-                                                    </div>
-                                                    <div class="vd_checkbox">
-                                                        <input type="checkbox" id="checkbox-2" value="1" required name="checked">
-                                                        <label for="checkbox-2"> I agree with <a href="#">terms of service</a></label>
-                                                    </div>
-                                                    @if($errors->has('checked'))
-                                                        <span class="error">{{$errors->first('checked')}}</span>
-                                                    @endif
-                                                </div>
-                                                <div class="col-md-12 text-center mgbt-xs-5">
-                                                    <button class="btn vd_bg-green vd_white width-100" type="submit"  >Register</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- Panel Widget -->
-
-                            </div>
-                            <!-- vd_login-page -->
-
-                        </div>
-                        <!-- .vd_content-section -->
-
-                    </div>
-                    <!-- .vd_content -->
-                </div>
-                <!-- .vd_container -->
-            </div>
-            <!-- .vd_content-wrapper -->
-            <div class=" col-md-2  content-wrapper" >
-                <br>
-                <div style="text-align:right" >
-
-                    <button class="btn vd_bg-green vd_white " type="submit" id="login-submit"  onClick="document.location.href='http://cephzonecrm.com/login.html'"  >Company Registration</button>
-                </div>
-            </div>
-            <!-- Middle Content End -->
-
+            <!-- vd_login-page --> 
+            
+          </div>
+          <!-- .vd_content-section --> 
+          
         </div>
-        <!-- .container -->
+        <!-- .vd_content --> 
+      </div>
+      <!-- .vd_container --> 
     </div>
-    <!-- .content -->
+    <div class=" col-md-4 content-wrapper"><br><br>
+      <div class="container">
+        <div class="content clearfix">
+          <div class="content-section clearfix">
+            <div class="login-page">
+              <div class="heading clearfix">
+                <div class="logo">
+                  <h2 class="mgbt-xs-5"></h2>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+
+              </div>
+              <div class="panel widget">
+                <div class="panel-body">
+                                  <div class="register-panel text-center font-semibold"> Already Have an Account? <br/>
+ </div>
+                <h4 class="text-center font-semibold vd_grey"> Company LOGIN</h4>                        
+                  <!--<div class="login-icon entypo-icon"> -->
+                  <!--<i class="icon-key"></i> -->
+                  
+                  <!--</div>-->
+                  <form class="form-horizontal" id="login-form" action="#" role="form">
+                  <div class="alert alert-danger vd_hidden">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
+                    <span class="vd_alert-icon"><i class="fa fa-exclamation-circle vd_red"></i></span><strong>Oh snap!</strong> Change a few things up and try submitting again. </div>
+                  <div class="alert alert-success vd_hidden">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
+                    <span class="vd_alert-icon"><i class="fa fa-check-circle vd_green"></i></span><strong>Well done!</strong>. </div>                  
+                    <div class="form-group  mgbt-xs-20">
+                      <div class="col-md-12">
+                        <div class="label-wrapper sr-only">
+                          <label class="control-label" for="email">Email</label>
+                        </div>
+                        <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon"> <i class="fa fa-envelope"></i> </span>
+                          <input type="email" placeholder="Email" id="email" name="email" class="required" value=" tsdsingh@gmail.com" required>
+                        </div>
+                        <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon">  </span>
+                        <select id="cars" class="required" style="background-color:gainsboro">
+  <option value="volvo">Select User Type</option>
+  <option value="volvo">Job Seeker</option>
+  <option value="saab">Recruiter</option>
+  <option value="mercedes">Freelancer</option>
+
+</select>
+
+                        
+                        
+                        </div>
+                        
+                        <div class="label-wrapper">
+                          <label class="control-label sr-only" for="password">Password</label>
+                        </div>
+                        <div class="vd_input-wrapper" id="password-input-wrapper" > <span class="menu-icon"> <i class="fa fa-lock"></i> </span>
+                          <input type="password" placeholder="Password" id="password" name="password" class="required" value="  demo" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="vd_login-error" class="alert alert-danger hidden"><i class="fa fa-exclamation-circle fa-fw"></i> Please fill the necessary field </div>
+                    <div class="form-group">
+                        
+                        <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-xs-6">
+                            <div class="vd_checkbox">
+                              <input type="checkbox" id="checkbox-1" value="1">
+                              <label for="checkbox-1"> Remember me</label>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-6 text-right">
+                            <div class=""> <a href="pages-forget-password.html">Forget Password? </a> </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12 text-center mgbt-xs-5">
+                        <button class="btn vd_bg-green vd_white width-100" type="submit" id="login-submit"  onClick="document.location.href='index.php'"  >Login</button>
+                      </div>
+                      
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- Panel Widget -->
+<!--               <div class="register-panel text-center font-semibold"> <a href="pages-register.html">CREATE AN ACCOUNT<span class="menu-icon"><i class="fa fa-angle-double-right fa-fw"></i></span></a> </div> -->
+            </div>
+            <!-- vd_login-page --> 
+            
+          </div>
+          <!-- .vd_content-section --> 
+          
+        </div>
+        <!-- .vd_content --> 
+      </div>
+      <!-- .vd_container --> 
+    </div>
+    
+    
+    <!-- Middle Content Start -->
+    
+    <div class=" col-md-4  content-wrapper" style="display: none;" >
+      <div class="container">
+<style>
+
+.tooltip-inner {
+    min-width: 150px; /* the minimum width */
+}
+
+
+      </style>
+        <div class="content clearfix">
+          <div class="content-section clearfix">
+            <div class="register-page">
+              <div class="heading clearfix">
+                <div class="logo">
+                  <h2 class="mgbt-xs-5"></h2>
+                </div>
+
+              </div>
+              <div class="panel widget">
+                <div class="panel-body">
+                                    <h4 class="text-center font-semibold vd_grey">USER REGISTRATION</h4>
+<!--                  <div id="register-success" class="alert alert-success" style="display:none;"><i class="fa fa-exclamation-circle fa-fw"></i> Registration confirmation has been sent to your email </div>
+                  <div id="register-passerror" class="alert alert-danger" style="display:none;"><i class="fa fa-exclamation-circle fa-fw"></i> Your password and Confirm password are not same </div>-->
+                  <form class="form-horizontal"  action="http://www.venmond.com/demo/vendroid/functions/register-form.php" role="form" id="register-form">
+                  <div class="alert alert-danger vd_hidden">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
+                    <span class="vd_alert-icon"><i class="fa fa-exclamation-circle vd_red"></i></span><strong>Oh snap!</strong> Change a few things up and try submitting again. </div>
+                  <div class="alert alert-warning vd_hidden">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
+                    <span class="vd_alert-icon"><i class="fa fa-exclamation-circle vd_red"></i></span>Your password and Confirm password are not same </div>                    
+                  <div class="alert alert-success vd_hidden">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="icon-cross"></i></button>
+                    <span class="vd_alert-icon"><i class="fa fa-check-circle vd_green"></i></span>Registration confirmation has been sent to your email. </div>                  
+                                        <div class="form-group">
+                      <div class="col-md-12">
+                        <div class="label-wrapper">
+                          <label class="control-label">User Type <span class="vd_red">*</span></label>
+                        </div>
+                        <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon">  </span>
+                    
+<a href="#" data-toggle="tooltip" data-placement="right" title="You can select anyone which defines your profile">
+
+                          <select id="cars" class="required" style="background-color:gainsboro"   data-placement="right" data-toggle="tooltip">
+                               <option value="volvo">Who are you  Job Seeker / Recruiter / Freelancer</option>
+  <option value="volvo">Job Seeker</option>
+  <option value="saab">Recruiter</option>
+  <option value="mercedes">Freelancer</option>
+
+</select> </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-6">
+                        <div class="label-wrapper">
+                          <label class="control-label">First Name <span class="vd_red">*</span></label>
+                        </div>
+                        <div class="vd_input-wrapper" id="first-name-input-wrapper"> <span class="menu-icon"> <i class="fa fa-user"></i> </span>
+                          <input type="text" placeholder="John" class="required" required name="firstname" id="firstname">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="label-wrapper">
+                          <label class="control-label">Last Name <span class="vd_red">*</span></label>
+                        </div>
+                        <div class="vd_input-wrapper" id="last-name-input-wrapper"> <span class="menu-icon"> <i class="fa fa-user"></i> </span>
+                          <input type="text" placeholder="Doe" class="required" required name="lastname" id="lastname">
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group ">
+                      <div class="col-md-3">
+                        <div class="label-wrapper">
+                          <label class="control-label">Phone <span class="vd_red">*</span></label>
+                        </div>
+                        <div class="vd_input-wrapper" id="country-code-input-wrapper"> <span class="menu-icon"> <i class="fa fa-plus"></i> </span>
+                          <input type="number" placeholder="Country" class="required" required  name="country" id="country">
+                        </div>
+                      </div>
+                      <div class="col-md-9">
+                        <div class="label-wrapper">
+                          <label class="control-label">&nbsp;</label>
+                        </div>
+                        <div class="vd_input-wrapper no-icon" id="phone-input-wrapper">
+                          <input type="number" placeholder="Phone Number" class="required" required  name="phone" id="phone">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-md-12">
+                        <div class="label-wrapper">
+                          <label class="control-label">Email <span class="vd_red">*</span></label>
+                        </div>
+                        <div class="vd_input-wrapper" id="email-input-wrapper"> <span class="menu-icon"> <i class="fa fa-envelope"></i> </span>
+                          <input type="email" placeholder="Email" class="required" required  name="email" id="email">
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                    
+                    
+                    <div class="form-group">
+                      <div class="col-md-6">
+                        <div class="label-wrapper">
+                          <label class="control-label">Password <span class="vd_red">*</span></label>
+                        </div>
+                        <div class="vd_input-wrapper" id="password-input-wrapper"> <span class="menu-icon"> <i class="fa fa-lock"></i> </span>
+                          <input type="password" placeholder="Password" class="required" required  name="password" id="password">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="label-wrapper">
+                          <label class="control-label">Confirm Password <span class="vd_red">*</span></label>
+                        </div>
+                        <div class="vd_input-wrapper" id="confirm-password-input-wrapper"> <span class="menu-icon"> <i class="fa fa-lock"></i> </span>
+                          <input type="password" placeholder="Password" class="required" required  name="confirmpass" id="confirmpass">
+                        </div>
+                      </div>
+                    </div>
+                    <div id="vd_login-error" class="alert alert-danger hidden"><i class="fa fa-exclamation-circle fa-fw"></i> Please fill the necessary field </div>
+                    <div class="form-group">
+                      <div class="col-md-12 mgbt-xs-10 mgtp-20">
+                        <div class="vd_checkbox">
+                          <input type="checkbox" id="checkbox-1" value="1">
+                          <label for="checkbox-1"> Send me newsletter about the latest update</label>
+                        </div>
+                        <div class="vd_checkbox">
+                          <input type="checkbox" id="checkbox-2" value="1" required name="checkbox-2">
+                          <label for="checkbox-2"> I agree with <a href="#">terms of service</a></label>
+                        </div>
+                      </div>
+                      <div class="col-md-12 text-center mgbt-xs-5">
+                        <button class="btn vd_bg-green vd_white width-100" type="submit" id="submit-register" name="submit-register" onClick="document.location.href='index.php'"  >Register</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- Panel Widget -->
+
+            </div>
+            <!-- vd_login-page --> 
+            
+          </div>
+          <!-- .vd_content-section --> 
+          
+        </div>
+        <!-- .vd_content --> 
+      </div>
+      <!-- .vd_container --> 
+    </div>
+    <!-- .vd_content-wrapper --> 
+        <div class=" col-md-2  content-wrapper" style="display: none;" >
+            <br>
+            <div style="text-align:right" >
+
+                                              <button class="btn vd_bg-green vd_white " type="submit" id="login-submit"  onClick="document.location.href='http://cephzonecrm.com/login.html'"  >Company Registration</button>
+                      </div>
+            </div>
+    <!-- Middle Content End --> 
+    
+  </div>
+  <!-- .container --> 
+</div>
 
     <!-- Footer Start -->
     <footer class="footer-2"  id="footer">

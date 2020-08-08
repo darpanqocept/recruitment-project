@@ -40,7 +40,7 @@
                                 </div>
                                 <h2 class="font-semibold mgbt-xs-5">Mariah Caraiban</h2>
                                 <h4>Education Counsultatnt</h4>
-                                <p>Education Social Worker with 18 years of experience. I primarily work with students in 6th-8th grade with social, emotional, adaptive, and other difficulties that may impact one?s ability to succeed personally and academically. Proficient in DBT, crisis management, RtI/MTSS.</p>
+                                <p>Education Social Worker with 18 years of experience. I primarily work with students in 6th-8th grade with social, emotional, adaptive, and other difficulties that may impact one’s ability to succeed personally and academically. Proficient in DBT, crisis management, RtI/MTSS.</p>
                                 <div class="mgtp-20">
                                     <table class="table table-striped table-hover" style="font-size: 14px" >
                                         <tbody>
@@ -808,7 +808,7 @@
                                                                 <a href="#">@Entrepreneur</a>
                                                             </div>
                                                             <div class="source-section first-section first-lower-section subscribe">
-                                                                <button type="button" class="btn btn-success btn-xs btn-subscribe"><i class="fa fa-newspaper-o fa-lg"></i>?BOOKMARK</button>
+                                                                <button type="button" class="btn btn-success btn-xs btn-subscribe"><i class="fa fa-newspaper-o fa-lg"></i> BOOKMARK</button>
                                                                 <span>222,980</span>
                                                             </div>
                                                             <div class="news-tags-reveal">
@@ -821,9 +821,9 @@
                                                                 <a href="">5 Essentials for Maximizing Results From Seed Capital</a>
                                                             </h3>
                                                             <div class="news-info">
-                                                                <span class="time"><i class="fa fa-user fa-1x"></i>?19 hours ago</span>
-                                                                <span class="time"><i class="fa fa-calendar fa-1x"></i>?19 hours ago</span>
-                                                                <span class="time"><i class="fa fa-clock-o fa-1x"></i>?1 min read</span>
+                                                                <span class="time"><i class="fa fa-user fa-1x"></i> 19 hours ago</span>
+                                                                <span class="time"><i class="fa fa-calendar fa-1x"></i> 19 hours ago</span>
+                                                                <span class="time"><i class="fa fa-clock-o fa-1x"></i> 1 min read</span>
                                                             </div>
                                                         </div>
 
@@ -840,9 +840,9 @@
                                                         </div>
 
                                                         <div class="news-actions" role="group" aria-label="">
-                                                            <a class="news-action" href="#"><i class="fa fa-share fa-lg"></i>?102</a>
-                                                            <a class="news-action" href="#"><i class="fa fa-heart-o fa-lg"></i>?204</a>
-                                                            <a class="news-action" href="#"><i class="fa fa-comments fa-lg"></i>?10</a>
+                                                            <a class="news-action" href="#"><i class="fa fa-share fa-lg"></i> 102</a>
+                                                            <a class="news-action" href="#"><i class="fa fa-heart-o fa-lg"></i> 204</a>
+                                                            <a class="news-action" href="#"><i class="fa fa-comments fa-lg"></i> 10</a>
                                                             <a class="news-action" href="#"><i class="fa fa-ellipsis-h fa-lg"></i></a>
                                                         </div>
 
@@ -864,7 +864,7 @@
                                                                 <a href="#">@Entrepreneur</a>
                                                             </div>
                                                             <div class="source-section first-section first-lower-section subscribe">
-                                                                <button type="button" class="btn btn-success btn-xs btn-subscribe"><i class="fa fa-newspaper-o fa-lg"></i>?BOOKMARK</button>
+                                                                <button type="button" class="btn btn-success btn-xs btn-subscribe"><i class="fa fa-newspaper-o fa-lg"></i> BOOKMARK</button>
                                                                 <span>222,980</span>
                                                             </div>
                                                             <div class="news-tags-reveal">
@@ -877,8 +877,8 @@
                                                                 <a href="">5 Essentials for Maximizing Results From Seed Capital</a>
                                                             </h3>
                                                             <div class="news-info">
-                                                                <span class="time"><i class="fa fa-calendar fa-1x"></i>?19 hours ago</span>
-                                                                <span class="time"><i class="fa fa-clock-o fa-1x"></i>?1 min read</span>
+                                                                <span class="time"><i class="fa fa-calendar fa-1x"></i> 19 hours ago</span>
+                                                                <span class="time"><i class="fa fa-clock-o fa-1x"></i> 1 min read</span>
                                                             </div>
                                                         </div>
 
@@ -895,9 +895,9 @@
                                                         </div>
 
                                                         <div class="news-actions" role="group" aria-label="">
-                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-share-alt fa-lg"></i>?102</a>
-                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-heart-o fa-lg"></i>?204</a>
-                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-comments fa-lg"></i>?10</a>
+                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-share-alt fa-lg"></i> 102</a>
+                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-heart-o fa-lg"></i> 204</a>
+                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-comments fa-lg"></i> 10</a>
                                                             <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-ellipsis-h fa-lg"></i></a>
                                                         </div>
 
@@ -919,7 +919,7 @@
                                                                 <a href="#">@Entrepreneur</a>
                                                             </div>
                                                             <div class="source-section first-section first-lower-section subscribe">
-                                                                <button type="button" class="btn btn-success btn-xs btn-subscribe"><i class="fa fa-newspaper-o fa-lg"></i>?BOOKMARK</button>
+                                                                <button type="button" class="btn btn-success btn-xs btn-subscribe"><i class="fa fa-newspaper-o fa-lg"></i> BOOKMARK</button>
                                                                 <span>222,980</span>
                                                             </div>
                                                             <div class="news-tags-reveal">
@@ -932,8 +932,8 @@
                                                                 <a href="">5 Essentials for Maximizing Results From Seed Capital</a>
                                                             </h3>
                                                             <div class="news-info">
-                                                                <span class="time"><i class="fa fa-calendar fa-1x"></i>?19 hours ago</span>
-                                                                <span class="time"><i class="fa fa-clock-o fa-1x"></i>?1 min read</span>
+                                                                <span class="time"><i class="fa fa-calendar fa-1x"></i> 19 hours ago</span>
+                                                                <span class="time"><i class="fa fa-clock-o fa-1x"></i> 1 min read</span>
                                                             </div>
                                                         </div>
 
@@ -950,9 +950,9 @@
                                                         </div>
 
                                                         <div class="news-actions" role="group" aria-label="">
-                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-share-alt fa-lg"></i>?102</a>
-                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-heart-o fa-lg"></i>?204</a>
-                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-comments fa-lg"></i>?10</a>
+                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-share-alt fa-lg"></i> 102</a>
+                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-heart-o fa-lg"></i> 204</a>
+                                                            <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-comments fa-lg"></i> 10</a>
                                                             <a class="btn btn-link btn-xs btn-action" href="#"><i class="fa fa-ellipsis-h fa-lg"></i></a>
                                                         </div>
 
