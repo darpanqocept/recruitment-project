@@ -21,6 +21,11 @@ Route::match(['get','post'],'/',['as'=>'web.home.index','uses'=>'Web\HomeControl
 Route::match(['get','post'],'/login',['as'=>'web.home.loginDisplay','uses'=>'Web\HomeController@loginDisplay']);
 Route::match(['get','post'],'/register',['as'=>'web.home.userRegister','uses'=>'Web\HomeController@userRegister']);
 Route::match(['get','post'],'/loginUser',['as'=>'web.home.loginUser','uses'=>'Web\HomeController@loginUser']);
+
+/*--recruiter login------*/
+Route::match(['get','post'],'/recloginUser',['as'=>'web.home.recloginUser','uses'=>'Web\HomeController@recloginUser']);
+/*--end recruiter login------*/
+
 Route::match(['get','post'],'/logout',['as'=>'web.home.logoutUser','uses'=>'Web\HomeController@logoutUser']);
 /*login*/
 
@@ -44,6 +49,22 @@ Route::match(['get','post'],'/recruiter/myjob',['as'=>'web.recruiter.my-job','us
 Route::match(['get','post'],'/recruiter/candidate',['as'=>'web.recruiter.allCandidates','uses'=>'Web\recruiterController@allCandidates']);
 Route::match(['get','post'],'/recruiter/project',['as'=>'web.recruiter.myProjects','uses'=>'Web\RecruiterController@myProjects']);
 Route::match(['get','post'],'/recruiter/project',['as'=>'web.recruiter.postFeed','uses'=>'Web\RecruiterController@addpostFeed']);
+
+Route::match(['get','post'],'/recruiter/likefeed/{id}',['as'=>'web.recruiter.likefeed','uses'=>'Web\RecruiterController@likepostFeed']);
+
+
+
+Route::match(['get','post'],'/recruiter/postFeedcomment/{id}',['as'=>'web.recruiter.postFeedcomment','uses'=>'Web\RecruiterController@commentpostFeed']);
+Route::match(['get','post'],'/recruiter/postJob',['as'=>'web.recruiter.postJob','uses'=>'Web\RecruiterController@postJobdata']);
+
+Route::match(['get','post'],'/recruiter/editjob/{id}',['as'=>'web.recruiter.editjob','uses'=>'Web\RecruiterController@editjobdata']);
+
+Route::match(['get','post'],'/recruiter/editpostJob/{id}',['as'=>'web.recruiter.editpostJob','uses'=>'Web\RecruiterController@editpostdata']);
+
+
+//Route::get('/like/{id}', 'MainController@likepost')->name('like');
+
+
 /*Recruiter*/
 
 /*Freelancer*/

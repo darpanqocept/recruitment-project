@@ -1,4 +1,36 @@
 @include('web.template.CRM.recruiter.include.header')
+<?php
+
+function time_elapsed_string($datetime, $full = false) {
+    $now = new DateTime;
+    $ago = new DateTime($datetime);
+    $diff = $now->diff($ago);
+
+    $diff->w = floor($diff->d / 7);
+    $diff->d -= $diff->w * 7;
+
+    $string = array(
+        'y' => 'year',
+        'm' => 'month',
+        'w' => 'week',
+        'd' => 'day',
+        'h' => 'hour',
+        'i' => 'minute',
+        's' => 'second',
+    );
+    foreach ($string as $k => &$v) {
+        if ($diff->$k) {
+            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+        } else {
+            unset($string[$k]);
+        }
+    }
+
+    if (!$full) $string = array_slice($string, 0, 1);
+    return $string ? implode(', ', $string) . ' ago' : 'just now';
+}
+
+ ?>
 <link rel="stylesheet" href="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.css">
 <div class="vd_content-wrapper">
    <div class="vd_container">
@@ -72,40 +104,47 @@
                                           <ul class="list-wrapper pd-lr-15">
                                             @if(count($postfeeddata)>0)
                                                @foreach($postfeeddata as $upostfeeddata)
+
                                              <li class="tl-item"> 
                                                 <div class="tl-label panel widget light-widget panel-bd-left">
                                                    <div class="panel-body">
                                                       <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="{{ asset('web/img/avatar/avatar-5.jpg') }}">
                                                       <h3 class="mgtp-10 mgbt-xs-5"> {{  $upostfeeddata->first_name }} {{  $upostfeeddata->last_name }}<em class="vd_soft-grey font-sm">via facebook</em> </h3>
-                                                      <span class="vd_soft-grey">1.30 pm  -  near <a href="#">Los Angeles</a> - <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-original-title="Shared Globally" class=""><i class="fa fa-globe"></i></a></span>
+                                                      <span class="vd_soft-grey">{{ 
+                                                         time_elapsed_string($upostfeeddata->created_at) }}  near <a href="#">Los Angeles</a> - <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-original-title="Shared Globally" class=""><i class="fa fa-globe"></i></a></span>
                                                       <div class="clearfix mgbt-xs-10"></div>
                                                       <p class="mgbt-xs-20"> {{  $upostfeeddata->description }}</p>
-                                                      <div class="tl-action"><a role="button" class="btn btn-sm mgr-10" href="javascript:void(0)"><i class="fa fa-thumbs-up fa-fw"></i> Like (10)</a> <a role="button" class="btn btn-sm btn-xs mgr-10" href="javascript:void(0)"><i class="fa fa-comment fa-fw"></i> Comment (2)</a> <a role="button" class="btn btn-sm " href="javascript:void(0)"><i class="fa fa-share fa-fw"></i> Share</a></div>
+                                                      <p class="mgbt-xs-20"> {{  $upostfeeddata->hashtag }}</p>
+                                                      @if($upostfeeddata->image!='')
+                                                         <div class="tl-post-image mgbt-xs-20"> <a data-rel="prettyPhoto[2]" href="{{ url('uploads') }}/{{  $upostfeeddata->image  }}"> <img src="{{ url('uploads') }}/{{  $upostfeeddata->image  }}" alt="example image"> </a> </div>   
+                                                         @endif                               <!-- <div class="tl-post-video mgbt-xs-20"> <iframe style="width:100%; height:350px; border:none;" src="http://www.youtube.com/embed/ASO_zypdnsQ" allowfullscreen></iframe></div> -->
+                                                      <div class="tl-action">
+                                                         <?php $userlike=DB::table('userpostfeedlike')->where(['user_post_feed_id'=>$upostfeeddata->id,'user_id' =>Auth::user()->id])->get();
+                                                         $countlike = count(json_decode($userlike));
+
+                                                         ?>
+                                                         @if($countlike==0)
+                                                         <a role="button" class="btn btn-sm mgr-10" href="{!! route('web.recruiter.likefeed', $upostfeeddata->id) !!}"><i class="fa fa-thumbs-up fa-fw"></i> Like ({{ count($upostfeeddata->likes) }})</a> 
+                                                         @else
+                                                          <a role="button" class="btn btn-sm mgr-10" style="color: blue;" href="javascript:void(0)"><i class="fa fa-thumbs-up fa-fw"></i> Like ({{ count($upostfeeddata->likes) }})</a>  
+                                                         @endif
+                                                         <a role="button" class="btn btn-sm btn-xs mgr-10" href="javascript:void(0)"><i class="fa fa-comment fa-fw"></i> Comment ({{ count($upostfeeddata->comments) }})</a> 
+                                                         <a role="button" class="btn btn-sm " href="javascript:void(0)"><i class="fa fa-share fa-fw"></i> Share</a></div>
                                                       <hr class="mgtp-0"/>
                                                       <div class="comments">
                                                          <div class="content-list content-image">
-                                                            <ul class="list-wrapper no-bd-btm">
+                                                            <ul class="list-wrapper no-bd-btm">                                                            
+                                                                @if(count($upostfeeddata->comments)>0)
+                                                                @foreach($upostfeeddata->comments as $usercmtt)
                                                                <li>
                                                                   <div class="menu-icon"><img src="{{ asset('web/img/avatar/avatar.jpg') }}" alt="example image"></div>
                                                                   <div class="menu-text">
-                                                                     Do you play or follow any sports?
-                                                                     <div class="menu-info"> <span class="menu-date">12 Minutes Ago </span> </div>
+                                                                     {{   $usercmtt->comment }}
+                                                                     <div class="menu-info"> <span class="menu-date"> {{  time_elapsed_string($usercmtt->created_at) }} </span> </div>
                                                                   </div>
-                                                               </li>
-                                                               <li>
-                                                                  <div class="menu-icon"><img src="{{ asset('web/img/avatar/avatar-2.jpg') }}" alt="example image"></div>
-                                                                  <div class="menu-text">
-                                                                     Good job mate !
-                                                                     <div class="menu-info"> <span class="menu-date">1 Hour 20 Minutes Ago </span> </div>
-                                                                  </div>
-                                                               </li>
-                                                               <li>
-                                                                  <div class="menu-icon"><img src="{{ asset('web/img/avatar/avatar.jpg') }}" alt="example image"></div>
-                                                                  <div class="menu-text">
-                                                                     Do you play or follow any sports?
-                                                                     <div class="menu-info"> <span class="menu-date">12 Minutes Ago </span> </div>
-                                                                  </div>
-                                                               </li>
+                                                               </li> 
+                                                               @endforeach
+                                                               @endif  
                                                             </ul>
                                                          </div>
                                                          <!-- content-list -->
@@ -116,7 +155,10 @@
                                                                   <div>
                                                                      <div class="menu-icon"><img src="{{ asset('web/img/avatar/avatar-5.jpg') }}" alt="example image"></div>
                                                                      <div class="menu-text">
-                                                                        <textarea  rows="3" class="width-100" placeholder="Write a comment..."></textarea>
+                                                                     <form name="postfeedcomment" action="{!! route('web.recruiter.postFeedcomment', $upostfeeddata->id ) !!}">
+                                                                        <textarea  rows="3" name="ucmt" class="emg width-100" placeholder="Write a comment..." required=""></textarea>
+                                                                        <input type="submit" class="btn vd_btn vd_bg-green" name="">
+                                                                     </form>
                                                                      </div>
                                                                   </div>
                                                                </div>
@@ -131,156 +173,8 @@
                                                 <!-- panel -->
                                              </li>
                                               @endforeach
-                                              @endif
-                                             <li class="tl-item">
-                                                <div class="tl-icon danger"> <i class="fa fa-picture-o"></i> </div>
-                                                <div class="tl-label panel widget light-widget panel-bd-left vd_bdl-red">
-                                                   <div class="panel-body">
-                                                      <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="{{ asset('web/img/avatar/avatar-5.jpg') }}">
-                                                      <h3 class="mgtp-10 mgbt-xs-5"> Rhonda William <em class="vd_soft-grey font-sm">@rhondawil</em> </h3>
-                                                      <span class="vd_soft-grey">07.45 am  -  near <a href="#">Los Angeles</a> - <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-original-title="Shared Globally" class=""><i class="fa fa-globe"></i></a></span>
-                                                      <div class="clearfix mgbt-xs-10"></div>
-                                                      <p class="mgbt-xs-20"> Little hope on this little country</p>
-                                                      <div class="tl-post-image mgbt-xs-20"> <a data-rel="prettyPhoto[2]" href="img/blog/01-large.jpg') }}"> <img src="{{ asset('web/img/blog/01-large.jpg') }}" alt="example image"> </a> </div>
-                                                      <div class="tl-action"><a role="button" class="btn btn-sm mgr-10" href="javascript:void(0)"><i class="fa fa-thumbs-up fa-fw"></i> Like</a> <a role="button" class="btn btn-sm btn-xs mgr-10" href="javascript:void(0)"><i class="fa fa-comment fa-fw"></i> Comment</a> <a role="button" class="btn btn-sm " href="javascript:void(0)"><i class="fa fa-share fa-fw"></i> Share</a></div>
-                                                   </div>
-                                                   <!-- panel-body -->
-                                                </div>
-                                                <!-- panel -->
-                                             </li>
-                                             <li class="tl-item tl-item-date tl-separator">
-                                                <div class="tl-date  tl-date-2"> Yes<br/>
-                                                   terday 
-                                                </div>
-                                             </li>
-                                             <li class="tl-item">
-                                                <div class="tl-icon warning"> <i class="fa fa-video-camera"></i> </div>
-                                                <div class="tl-label panel widget light-widget panel-bd-left vd_bdl-yellow">
-                                                   <div class="panel-body">
-                                                      <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="{{ asset('web/img/avatar/avatar-5.jpg') }}">
-                                                      <h3 class="mgtp-10 mgbt-xs-5"> Rhonda William <em class="vd_soft-grey font-sm">@rhondawil</em> </h3>
-                                                      <span class="vd_soft-grey">07.45 am  -  near <a href="#">Los Angeles</a> - <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-original-title="Shared Globally" class=""><i class="fa fa-globe"></i></a></span>
-                                                      <div class="clearfix mgbt-xs-10"></div>
-                                                      <p class="mgbt-xs-20"> Gosh this is so funny...</p>
-                                                      <div class="tl-post-video mgbt-xs-20"> <iframe style="width:100%; height:350px; border:none;" src="http://www.youtube.com/embed/ASO_zypdnsQ" allowfullscreen></iframe></div>
-                                                      <div class="tl-action"><a role="button" class="btn btn-sm mgr-10" href="javascript:void(0)"><i class="fa fa-thumbs-up fa-fw"></i> Like</a> <a role="button" class="btn btn-sm btn-xs mgr-10" href="javascript:void(0)"><i class="fa fa-comment fa-fw"></i> Comment</a> <a role="button" class="btn btn-sm " href="javascript:void(0)"><i class="fa fa-share fa-fw"></i> Share</a></div>
-                                                   </div>
-                                                   <!-- panel-body -->
-                                                </div>
-                                                <!-- panel -->
-                                             </li>
-                                             <li class="tl-item tl-item-year tl-separator" >
-                                                <div class="tl-year">2013</div>
-                                             </li>
-                                             <li class="tl-item tl-item-date tl-separator">
-                                                <div class="tl-date  tl-date-3"> <span class="tl-day">25</span><br/>
-                                                   <span class="tl-month">NOV</span> 
-                                                </div>
-                                             </li>
-                                             <li class="tl-item">
-                                                <div class="tl-icon info entypo-icon"> <i class="icon-newspaper"></i> </div>
-                                                <div class="tl-label panel widget light-widget panel-bd-left vd_bdl-blue">
-                                                   <div class="panel-body">
-                                                      <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="{{ asset('web/img/avatar/avatar-5.jpg') }}">
-                                                      <h3 class="mgtp-10 mgbt-xs-5"> Rhonda William </h3>
-                                                      <span class="vd_soft-grey">07.45 am  -  near <a href="#">Los Angeles</a> - <a href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-original-title="Shared Globally" class=""><i class="fa fa-globe"></i></a></span>
-                                                      <div class="clearfix mgbt-xs-10"></div>
-                                                      <p class="mgbt-xs-20"> <img src="{{ asset('web/img/blog/03.jpg') }}" class="img-right" alt="example image">Ut sit amet dignissim libero. Integer scelerisque, eros interdum suscipit rhoncus, mauris felis eleifend libero, a adipiscing arcu sapien eu nisi. Proin vehicula lacus non lacus lobortis ultricies. Nulla dui metus, viverra in sodales a, rutrum sed metus. Cras blandit vehicula ligula et fringilla. Suspendisse convallis rutrum arcu nec rutrum. Pellentesque sed felis ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum et sem eu eros fringilla bibendum quis non quam. Nunc tempor sodales tempus. <br>
-                                                         <br>
-                                                         Integer scelerisque, eros interdum suscipit rhoncus, mauris felis eleifend libero, a adipiscing arcu sapien eu nisi. Proin vehicula lacus non lacus lobortis ultricies. Nulla dui metus, viverra in sodales a, rutrum sed metus. Cras blandit vehicula ligula et fringilla. Suspendisse convallis rutrum arcu nec rutrum. Pellentesque sed felis ante. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum et sem eu eros fringilla bibendum quis non quam. Nunc tempor sodales tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum et sem eu eros fringilla bibendum quis non quam. Nunc tempor sodales tempus. 
-                                                      </p>
-                                                      <div class="tl-action"><a role="button" class="btn btn-sm mgr-10" href="javascript:void(0)"><i class="fa fa-thumbs-up fa-fw"></i> Like</a> <a role="button" class="btn btn-sm btn-xs mgr-10" href="javascript:void(0)"><i class="fa fa-comment fa-fw"></i> Comment</a> <a role="button" class="btn btn-sm " href="javascript:void(0)"><i class="fa fa-share fa-fw"></i> Share</a></div>
-                                                   </div>
-                                                   <!-- panel-body -->
-                                                </div>
-                                                <!-- panel -->
-                                             </li>
-                                             <li class="tl-item">
-                                                <div class="tl-icon primary"> <i class="fa fa-users"></i> </div>
-                                                <div class="tl-label panel widget light-widget panel-bd-left vd_bdl-black">
-                                                   <div class="panel-body">
-                                                      <img alt="example image" class="tl-img img-right img-circle  mgtp-5" src="{{ asset('web/img/avatar/avatar-5.jpg') }}">
-                                                      <h3 class="mgtp-10 mgbt-xs-5"> Rhonda William </h3>
-                                                      <span class="vd_soft-grey">07.45 am </span>
-                                                      <div class="clearfix mgbt-xs-10"></div>
-                                                      <p class="mgbt-xs-20 font-bold"> Added new friends</p>
-                                                      <div class="tl-post-friends">
-                                                         <div class="content-grid column-xs-3 column-sm-4 column-md-5 column-lg-6 height-xs-3">
-                                                            <ul class="list-wrapper">
-                                                               <li>
-                                                                  <a href="#">
-                                                                     <div class="menu-icon"><img alt="example image" src="{{ asset('web/img/avatar/avatar.jpg') }}"></div>
-                                                                  </a>
-                                                                  <div class="menu-text">
-                                                                     Gabriella Montagna
-                                                                     <div class="menu-info">
-                                                                        <div class="menu-date">San Diego</div>
-                                                                     </div>
-                                                                  </div>
-                                                               </li>
-                                                               <li>
-                                                                  <a href="#">
-                                                                     <div class="menu-icon"><img alt="example image" src="{{ asset('web/img/avatar/avatar-2.jpg') }}"></div>
-                                                                  </a>
-                                                                  <div class="menu-text">
-                                                                     Jonathan Fuzzy
-                                                                     <div class="menu-info">
-                                                                        <div class="menu-date">Seattle</div>
-                                                                     </div>
-                                                                  </div>
-                                                               </li>
-                                                               <li>
-                                                                  <a href="#">
-                                                                     <div class="menu-icon"><img alt="example image" src="{{ asset('web/img/avatar/avatar-3.jpg') }}"></div>
-                                                                  </a>
-                                                                  <div class="menu-text">
-                                                                     Sakura Hinata
-                                                                     <div class="menu-info">
-                                                                        <div class="menu-date">Hawaii</div>
-                                                                     </div>
-                                                                  </div>
-                                                               </li>
-                                                               <li>
-                                                                  <a href="#">
-                                                                     <div class="menu-icon"><img alt="example image" src="{{ asset('web/img/avatar/avatar-4.jpg') }}"></div>
-                                                                  </a>
-                                                                  <div class="menu-text">
-                                                                     Rikudou Sennin
-                                                                     <div class="menu-info">
-                                                                        <div class="menu-date">Las Vegas</div>
-                                                                     </div>
-                                                                  </div>
-                                                               </li>
-                                                               <li>
-                                                                  <a href="#">
-                                                                     <div class="menu-icon"><img alt="example image" src="{{ asset('web/img/avatar/avatar-5.jpg') }}"></div>
-                                                                  </a>
-                                                                  <div class="menu-text">
-                                                                     Kim Kardiosun
-                                                                     <div class="menu-info">
-                                                                        <div class="menu-date">New York</div>
-                                                                     </div>
-                                                                  </div>
-                                                               </li>
-                                                               <li>
-                                                                  <a href="#">
-                                                                     <div class="menu-icon"><img alt="example image" src="{{ asset('web/img/avatar/avatar-6.jpg') }}"></div>
-                                                                  </a>
-                                                                  <div class="menu-text">
-                                                                     Brad Pita
-                                                                     <div class="menu-info">
-                                                                        <div class="menu-date">Seattle</div>
-                                                                     </div>
-                                                                  </div>
-                                                               </li>
-                                                            </ul>
-                                                         </div>
-                                                      </div>
-                                                   </div>
-                                                   <!-- panel-body -->
-                                                </div>
-                                                <!-- panel -->
-                                             </li>
+                                              @endif 
+                                            
                                           </ul>
                                        </div>
                                        <div class="closing text-center">
@@ -935,7 +829,8 @@
                                        <li class="one-icon">
                                           <a data-toggle="tab-post" href="javascript:void(0);">
                                           <span class="menu-icon">
-                                          <i class="fa fa-camera fa-fw"></i>
+                                             <input type="file" style="display: none;" id="image" name="feedimage">
+                                          <i class="fa fa-camera fa-fw" id="icon-file2"></i>
                                           </span>
                                           </a>
                                        </li>
@@ -983,7 +878,7 @@
                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
                            <h4 class="modal-title" id="myModalLabel">Job Post</h4>
                         </div>
-                        <div class="modal-body"  data-rel="scroll" data-scrollheight="600">
+                        <div class="modal-body"   style="overflow-y: scroll; height: 600px "  data-scrollheight="600"> <!--   -->
                            <style>
                               body{
                               margin-top:40px;
@@ -1053,16 +948,16 @@
                                     </div>
                                  </div>
                               </div>
-                              <form role="form">
+                              <form method="post" action="{!! route('web.recruiter.postJob') !!}" >
+                                @csrf
                                  <div class="row setup-content" id="step-1">
                                     <div class="col-xs-12">
                                        <div class="col-md-12">
-                                          <h3> Job Details</h3>
-                              <form class="form-horizontal">
+                                          <h3> Job Details</h3>   
                               <div class="form-group">
                               <label class="col-sm-3 control-label">Title<i style="color: red">&nbsp;*&nbsp;</i></label>
                               <div class="col-sm-9 controls">
-                              <input class="form-control" type="text" placeholder="Designation">
+                              <input class="form-control" id="job_title" name="job_title" type="text" placeholder="Title">
                               </div>
                               </div>
                               <br> <br>
@@ -1070,16 +965,16 @@
                               <label class="col-sm-3 control-label">Experience<i style="color: red">&nbsp;*&nbsp;</i></label>
                               <div class="">
                               <div class="col-xs-4">
-                              <select  id="1" class="form-control" style="width:100%" name="1"><option value="" selected="selected">Experince<i style="color: red">&nbsp;*&nbsp;</i> </option>
-                              <option value="1">0 - 1 Years</option>
-                              <option value="2">2 - 3 Years</option>
-                              <option value="3">3 - 4 Years</option>
-                              <option value="4">4 - 5 Years</option>
-                              <option value="5">5 - 6 Years</option>
-                              <option value="6">6 - 7 Years</option>
-                              <option value="7">7 - 8 Years</option>
-                              <option value="8">8 - 9 Years</option>
-                              <option value="9">10++</option>
+                              <select  id="job_exper" class="form-control" style="width:100%" name="job_exper"><option value="" selected="selected">Experince<i style="color: red">&nbsp;*&nbsp;</i> </option>
+                              <option value="0-1">0 - 1 Years</option>
+                              <option value="2-3">2 - 3 Years</option>
+                              <option value="3-4">3 - 4 Years</option>
+                              <option value="4-5">4 - 5 Years</option>
+                              <option value="5-6">5 - 6 Years</option>
+                              <option value="6-7">6 - 7 Years</option>
+                              <option value="7-8">7 - 8 Years</option>
+                              <option value="8-9">8 - 9 Years</option>
+                              <option value="9+">10++</option>
                               </select>
                               </div>
                               <!-- col-xs-12 -->
@@ -1093,7 +988,7 @@
                               <div class="">
                               <!-- col-xs-12 -->
                               <div class="col-xs-9">
-                              <input class="form-control" type="text" placeholder="Designation">
+                              <input class="form-control" type="text" name="sallary" id="sallary" placeholder="Sallary">
                               </div>
                               </div>
                               </div>
@@ -1101,7 +996,7 @@
                               <div class="form-group">
                               <label class="col-sm-3 control-label">Number of positions<i style="color: red">&nbsp;*&nbsp;</i></label>
                               <div class="col-sm-9 controls">
-                              <input class="form-control" type="text" placeholder="Number of positions">
+                              <input class="form-control" name="no_of_pos" id="no_of_pos" type="number" min="1" placeholder="Number of positions">
                               </div>
                               </div>
                               <br> <br>
@@ -1109,12 +1004,12 @@
                               <label class="col-sm-3 control-label">Qualification<i style="color: red">&nbsp;*&nbsp;</i></label>
                               <div class="col-sm-9 controls">
                               <div class="col-xs-12">
-                              <select  id="degree_level_id" name="degree_level_id"><option value="" selected="selected">Select  Qualification</option>
-                              <option value="5">Doctorate/PhD</option>
-                              <option value="4">Post Graduation</option>
-                              <option value="3">Graduation</option>
-                              <option value="2">12th/O-Level</option>
-                              <option value="1">10th</option>
+                              <select  id="qualification" name="qualification"><option value="" selected="selected">Select  Qualification</option>
+                              <option value="Doctorate/PhD">Doctorate/PhD</option>
+                              <option value="Post Graduation">Post Graduation</option>
+                              <option value="Graduation">Graduation</option>
+                              <option value="12th/O-Level">12th/O-Level</option>
+                              <option value="10th">10th</option>
                               </select>
                               </div>
                               <!-- col-xs-12 -->
@@ -1126,9 +1021,9 @@
                               <div class="col-sm-9 controls">
                               <!-- col-xs-12 -->
                               <div class="col-xs-12">
-                              <select  id="2" name="2"><option value="" selected="selected">Select Domain</option>
-                              <option value="1">IT</option>
-                              <option value="2">Non IT</option>
+                              <select  id="domain" name="domain"><option value="" selected="selected">Select Domain</option>
+                              <option value="IT">IT</option>
+                              <option value="NON-IT">Non IT</option>
                               </select>
                               </div>
                               </div>
@@ -1139,10 +1034,10 @@
                               <div class="col-sm-9 controls">
                               <!-- col-xs-12 -->
                               <div class="col-xs-12">
-                              <select><option value="" selected="selected">Select Shift</option>
-                              <option value="1">Day Shift</option>
-                              <option value="2">Night Shift</option>
-                              <option value="2">Rotational Shift</option>
+                              <select name="shift" id="shift"><option value="" selected="selected">Select Shift</option>
+                              <option value="Day Shift">Day Shift</option>
+                              <option value="Night Shift">Night Shift</option>
+                              <option value="Rotational Shift">Rotational Shift</option>
                               </select>
                               </div>
                               </div>
@@ -1153,9 +1048,9 @@
                               <div class="col-sm-9 controls">
                               <!-- col-xs-12 -->
                               <div class="col-xs-12">
-                              <select ><option value="" selected="selected">Select functional Area</option>
-                              <option value="1">Manager</option>
-                              <option value="2">Marketing</option>
+                              <select name="functional" id="functional" ><option value="" selected="selected">Select functional Area</option>
+                              <option value="Manager">Manager</option>
+                              <option value="Marketing">Marketing</option>
                               </select>
                               </div>
                               </div>
@@ -1166,13 +1061,7 @@
                               <div class="col-sm-9 controls">
                               <!-- col-xs-12 -->
                               <div class="col-xs-12">
-                              <div id="tags1584440712527_tagsinput" class="tagsinput" style="width: auto; height: 100px;">
-                              <span class="tag"><span>Java&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                              <span class="tag"><span>PHP&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                              <span class="tag"><span>Database&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                              <span class="tag"><span>Design&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                              <span class="tag"><span>UI & UX&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                              <div id="tags1584440712527_addTag"><input  data-default="add a tag" style="color: rgb(102, 102, 102); width: 68px;"></div><div class="tags_clear"></div></div>
+                              <input type="text" data-rel = "tags-input" name="skillss" id="skillss">
                               </div>
                               </div>
                               </div>
@@ -1182,10 +1071,11 @@
                               <div class="col-sm-9 controls">
                               <!-- col-xs-12 -->
                               <div class="col-xs-12">
-                              <select ><option value="" selected="selected">Select Gender</option>
-                              <option value="1">Male</option>
-                              <option value="2">Female</option>
-                              <option value="2">Any</option>
+                              <select name="gender" id="gender">
+                                <option value="" selected="selected">Select Gender</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                              <option value="Any">Any</option>
                               </select>
                               </div>
                               </div>
@@ -1196,10 +1086,11 @@
                               <div class="col-sm-9 controls">
                               <!-- col-xs-12 -->
                               <div class="col-xs-12">
-                              <select ><option value="" selected="selected">Select Interview Type</option>
-                              <option value="1">Walk In</option>
-                              <option value="2">Third Party</option>
-                              <option value="2">Affiliate</option>
+                              <select name="interview_type" id="interview_type" >
+                                <option value="" selected="selected">Select Interview Type</option>
+                              <option value="Walk In">Walk In</option>
+                              <option value="Third Party">Third Party</option>
+                              <option value="Affiliate">Affiliate</option>
                               </select>
                               </div>
                               </div>
@@ -1208,52 +1099,39 @@
                               <div class="form-group"  style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 20px">
                               <label class="col-sm-3 control-label">Job Summary<i style="color: red">&nbsp;*&nbsp;</i></label>
                               <div class="col-sm-9 controls">
-                              <textarea rows="3"  class="form-control" placeholder="Job Summary"></textarea>
+                              <textarea rows="3" name="job_summary" id="job_summary"  class="form-control" placeholder="Job Summary"></textarea>
                               </div>
                               </div>
                               <br> <br>
                               <div class="form-group"  style="padding-top: 30px ; padding-bottom: 25px  ; margin-top: 20px">
                               <label class="col-sm-3 control-label">Job Description<i style="color: red">&nbsp;*&nbsp;</i></label>
                               <div class="col-sm-9 controls">
-                              <textarea rows="8"  class="form-control" placeholder="Job Description" ></textarea>
+                              <textarea rows="8" name="job_desc"  class="form-control" id="job_desc" placeholder="Job Description" ></textarea>
                               </div>
                               </div>
                               <br> <br>
                               <div style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 20px">
                               </div>
-                              <div class="form-group" style="padding-top: 30px ; padding-bottom: 10px  ; margin-top: 20px" >
-                              <label class="col-sm-3 control-label">Schedule Post<i style="color: red">&nbsp;*&nbsp;</i></label>
-                              <div class="col-sm-9 controls">
-                              <!-- col-xs-12 -->
-                              <div class="col-xs-12">
-                              <select><option value="" selected="selected">Schedule Post</option>
-                              <option value="1">Now</option>
-                              <option value="2">Date</option>
-                              </select>
-                              </div>
-                              </div>
-                              </div>
+                             
                               <div class="form-group" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px">
                               <label class="col-sm-3 control-label">Search String<i style="color: red">&nbsp;*&nbsp;</i></label>
                               <div class="col-sm-9 controls">
-                              <input class="form-control" type="text" placeholder="Search String">
+                              <input class="form-control" name="search_string" id="search_string" type="text" placeholder="Search String">
                               </div>
                               </div>
                               <div class="form-group" style="padding-top: 20px ; padding-bottom: 40px  ; margin-top: 30px">
-                              <label class="col-sm-3 control-label">Tag Group<i style="color: red">&nbsp;*&nbsp;</i></label>
+                              <label class="col-sm-3 control-label">Tag Group</label>
                               <div class="col-sm-9 controls">
-                              <div id="tags1584440712527_tagsinput" class="tagsinput" style="width: auto; height: 100px;">
-                              <span class="tag"><span>Recruiter&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                              <span class="tag"><span>HR&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                              <span class="tag"><span>Vendor&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                              <div id="tags1584440712527_addTag"><input  data-default="add a tag" style="color: rgb(102, 102, 102); width: 68px;"></div><div class="tags_clear"></div></div>
-                              </div>
-                              </div>
-                              </form>
-                              <br><br>               <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px" >Next</button>
+                              <input type="text" data-rel = "tags-input"  class="tagsinput" name="tag_group" id="tag_group" style="width: auto; height: 100px;">
                               </div>
                               </div>
                               </div>
+                             
+                              <br><br>           
+                                  <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" id="postbtn1" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px" >Next</button>
+                              </div>
+                              </div>
+                              
                               <div class="row setup-content" id="step-2">
                                  <div class="col-xs-12">
                                     <div class="col-md-12">
@@ -1261,30 +1139,22 @@
                                        <div class="form-group" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px">
                                           <label class="col-sm-3 control-label">Contact No<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Contact No">
+                                             <input name="contact_no" id="contact_no" class="form-control" type="text" placeholder="Contact No">
                                           </div>
                                        </div>
                                        <div class="form-group" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px">
                                           <label class="col-sm-3 control-label">Email<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Email">
+                                             <input name="email" id="email" class="form-control" type="text" placeholder="Email">
                                           </div>
                                        </div>
                                        <div class="form-group" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px">
                                           <label class="col-sm-3 control-label">Add Other Recruiters<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
-                                             <div id="tags1584440712527_tagsinput" class="tagsinput" style="width: auto; height: 100px;">
-                                                <span class="tag"><span>TSD&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                                                <span class="tag"><span>Satyam&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                                                <span class="tag"><span>Varun&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                                                <span class="tag"><span>Thakur&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                                                <span class="tag"><span>Seed&nbsp;&nbsp;</span><a href="#" title="Removing tag">x</a></span>
-                                                <div id="tags1584440712527_addTag"><input id="tags1584440712527_tag" value="" data-default="add a tag" style="color: rgb(102, 102, 102); width: 68px;"></div>
-                                                <div class="tags_clear"></div>
-                                             </div>
+                                            <input  data-rel = "tags-input" type="text"  name="other_rec" id="other_rec">
                                           </div>
                                        </div>
-                                       <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px" >Next</button>
+                                       <button class="btn btn-primary nextBtn btn-lg pull-right" id="postbtn2" type="button" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px" >Next</button>
                                     </div>
                                  </div>
                               </div>
@@ -1295,35 +1165,35 @@
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Company Name<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Company Name">
+                                             <input class="form-control" name="company_name" id="company_name" type="text" placeholder="Company Name">
                                           </div>
                                        </div>
                                        <br><br>
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Number Of Employees<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Number Of Employees">
+                                             <input class="form-control" id="num_emp" name="num_emp" type="text" placeholder="Number Of Employees">
                                           </div>
                                        </div>
                                        <br><br>
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Location<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Location">
+                                             <input name="location" id="location" class="form-control" type="text" placeholder="Location">
                                           </div>
                                        </div>
                                        <br><br>
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Website Link<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Website Link">
+                                             <input name="Website_link" id="Website_link" class="form-control" type="text" placeholder="Website Link">
                                           </div>
                                        </div>
                                        <br><br>
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Email<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Email">
+                                             <input name="cmp_email" id="cmp_email" class="form-control" type="text" placeholder="Email">
                                           </div>
                                        </div>
                                        <br><br>
@@ -1331,10 +1201,10 @@
                                           <label class="col-sm-3 control-label">Domain<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
                                              <div class="col-xs-12">
-                                                <select>
+                                                <select name="cmp_domain" id="cmp_domain">
                                                    <option value="" selected="selected">Select Domain</option>
-                                                   <option value="1">IT</option>
-                                                   <option value="2">Non IT</option>
+                                                   <option value="IT">IT</option>
+                                                   <option value="NON-IT">Non IT</option>
                                                 </select>
                                              </div>
                                           </div>
@@ -1343,11 +1213,11 @@
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label"> Description<i style="color: red">&nbsp;*&nbsp;</i></label>
                                           <div class="col-sm-9 controls">
-                                             <textarea rows="8"  class="form-control" placeholder="Company Description" ></textarea>
+                                             <textarea rows="8" name="cmp_desc" id="cmp_desc" class="form-control" placeholder="Company Description" ></textarea>
                                           </div>
                                        </div>
                                        <br><br>
-                                       <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px" >Next</button>
+                                       <button class="btn btn-primary nextBtn btn-lg pull-right" id="postbtn3" type="button" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px" >Next</button>
                                     </div>
                                  </div>
                               </div>
@@ -1358,51 +1228,53 @@
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Questionnaires #1</label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Questionnaires #1">
+                                             <input class="form-control" name="q1" id="q1" type="text" placeholder="Questionnaires #1">
                                           </div>
                                        </div>
                                        <br><br>
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Questionnaires #2</label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Questionnaires #2">
+                                             <input name="q2" id="q2" class="form-control" type="text" placeholder="Questionnaires #2">
                                           </div>
                                        </div>
                                        <br><br>
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Questionnaires #3</label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Questionnaires #3">
+                                             <input name="q3" id="q3" class="form-control" type="text" placeholder="Questionnaires #3">
                                           </div>
                                        </div>
                                        <br><br>
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Questionnaires #4</label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Questionnaires #4">
+                                             <input name="q4" id="q4" class="form-control" type="text" placeholder="Questionnaires #4">
                                           </div>
                                        </div>
                                        <br><br>
                                        <div class="form-group">
                                           <label class="col-sm-3 control-label">Questionnaires #5</label>
                                           <div class="col-sm-9 controls">
-                                             <input class="form-control" type="text" placeholder="Questionnaires #5">
+                                             <input name="q5" id="q5" class="form-control" type="text" placeholder="Questionnaires #5">
                                           </div>
                                        </div>
                                        <br><br>
-                                       <button  type="button"  >Add More</button>
+                                      <!--  <button  type="button"  >Add More</button> -->
                                        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" style="padding-top: 20px ; padding-bottom: 10px  ; margin-top: 30px" >Finish</button>
                                     </div>
                                  </div>
                               </div>
-                              </form>
+                              
                            </div>
                            <script>
                               $(document).ready(function () {
                               
                                   var navListItems = $('div.setup-panel div a'),
                                           allWells = $('.setup-content'),
-                                          allNextBtn = $('.nextBtn');
+                                          allNextBtn1 = $('#postbtn1');
+                                          allNextBtn2 = $('#postbtn2');
+                                          allNextBtn3 = $('#postbtn3');
                               
                                   allWells.hide();
                               
@@ -1420,7 +1292,70 @@
                                       }
                                   });
                               
-                                  allNextBtn.click(function(){
+                                  allNextBtn1.click(function(){
+                                    var job_title = $("#job_title").val();
+                                    var job_exper = $("#job_exper").val();
+                                    var sallary = $("#sallary").val();
+                                    var no_of_pos = $("#no_of_pos").val();
+                                    var qualification = $("#qualification").val();
+                                    var domain = $("#domain").val();
+                                    var shift = $("#shift").val();
+                                    var functional = $("#functional").val();
+                                    var skillss = $("#skillss").val();
+                                    var gender = $("#gender").val();
+                                    var interview_type = $("#interview_type").val();
+                                    var job_summary = $("#job_summary").val();
+                                    var job_desc = $("#job_desc").val();                       
+                                    var search_string = $("#search_string").val();
+                                    var tag_group = $("#tag_group").val();
+                                    if(job_title=='')
+                                    {
+                                        $("#job_title").focus();
+                                    }
+                                    else if(job_exper==''){
+                                       $("#job_exper").focus();
+                                    }
+                                    else if(sallary==''){
+                                       $("#sallary").focus();
+                                    }
+                                    else if(no_of_pos==''){
+                                       $("#no_of_pos").focus();
+                                    }
+                                    else if(qualification==''){
+                                       $("#qualification").focus();
+                                    }
+                                    else if(domain==''){
+                                       $("#domain").focus();
+                                    }
+                                    else if(shift==''){
+                                       $("#shift").focus();
+                                    }
+                                    else if(functional==''){
+                                       $("#functional").focus();
+                                    }
+                                    else if(skillss==''){
+                                       $("#skillss").focus();
+                                    }
+                                    else if(gender==''){
+                                       $("#gender").focus();
+                                    }
+                                    else if(interview_type==''){
+                                       $("#interview_type").focus();
+                                    }
+                                    else if(job_summary==''){
+                                       $("#job_summary").focus();
+                                    }
+                                    else if(job_desc==''){
+                                       $("#job_desc").focus();
+                                    }
+                                    else if(search_string==''){
+                                       $("#search_string").focus();
+                                    }
+                                    else if(tag_group==''){
+                                       $("#tag_group").focus();
+                                    }
+                                    else {
+
                                       var curStep = $(this).closest(".setup-content"),
                                               curStepBtn = curStep.attr("id"),
                                               nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
@@ -1437,7 +1372,106 @@
                               
                                       if (isValid)
                                           nextStepWizard.removeAttr('disabled').trigger('click');
+                                      }
                                   });
+
+
+                                  allNextBtn2.click(function(){
+                                    var contact_no = $("#contact_no").val();
+                                    var email = $("#email").val();
+                                    var other_rec = $("#other_rec").val();
+                                    if(contact_no=='')
+                                    {
+
+                                    }
+                                    else if(email=='')
+                                    {
+                                        $("#email").focus();
+                                    }
+                                    else if(other_rec=='')
+                                    {
+                                        $("#other_rec").focus();
+                                    }
+                                    else {
+
+                                      var curStep = $(this).closest(".setup-content"),
+                                              curStepBtn = curStep.attr("id"),
+                                              nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                                              curInputs = curStep.find("input[type='text'],input[type='url']"),
+                                              isValid = true;
+                              
+                                      $(".form-group").removeClass("has-error");
+                                      for(var i=0; i<curInputs.length; i++){
+                                          if (!curInputs[i].validity.valid){
+                                              isValid = false;
+                                              $(curInputs[i]).closest(".form-group").addClass("has-error");
+                                          }
+                                      }
+                              
+                                      if (isValid)
+                                          nextStepWizard.removeAttr('disabled').trigger('click');
+                                      }
+                                  });
+
+
+                                  allNextBtn3.click(function(){
+                                    var company_name = $("#company_name").val();
+                                    var num_emp = $("#num_emp").val();
+                                    var location = $("#location").val();
+                                    var Website_link = $("#Website_link").val();
+                                    var cmp_email = $("#cmp_email").val();
+                                    var cmp_domain = $("#cmp_domain").val();
+                                    var cmp_desc = $("#cmp_desc").val();
+                                    if(company_name=='')
+                                    {
+
+                                    }
+                                    else if(num_emp=='')
+                                    {
+                                        $("#num_emp").focus();
+                                    }
+                                    else if(location=='')
+                                    {
+                                        $("#location").focus();
+                                    }
+                                    else if(Website_link=='')
+                                    {
+                                        $("#Website_link").focus();
+                                    }
+                                    else if(cmp_email=='')
+                                    {
+                                        $("#cmp_email").focus();
+                                    }
+                                    else if(cmp_domain=='')
+                                    {
+                                        $("#cmp_domain").focus();
+                                    }
+                                    else if(cmp_desc=='')
+                                    {
+                                        $("#cmp_desc").focus();
+                                    }
+                                    else {
+                                      
+                                      document.getElementById("submitpost").disabled = false;
+                                      var curStep = $(this).closest(".setup-content"),
+                                              curStepBtn = curStep.attr("id"),
+                                              nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                                              curInputs = curStep.find("input[type='text'],input[type='url']"),
+                                              isValid = true;
+                              
+                                      $(".form-group").removeClass("has-error");
+                                      for(var i=0; i<curInputs.length; i++){
+                                          if (!curInputs[i].validity.valid){
+                                              isValid = false;
+                                              $(curInputs[i]).closest(".form-group").addClass("has-error");
+                                          }
+                                      }
+                              
+                                      if (isValid)
+                                          nextStepWizard.removeAttr('disabled').trigger('click');
+                                      }
+                                  });
+
                               
                                   $('div.setup-panel div a.btn-primary').trigger('click');
                               });
@@ -1447,10 +1481,11 @@
                         </div>
                         <div class="modal-footer background-login">
                            <button type="button" class="btn vd_btn vd_bg-grey" data-dismiss="modal">Close</button>
-                           <button type="button" class="btn vd_btn vd_bg-green">Save changes</button>
+                           <button type="submit" id="submitpost" disabled="" class="btn vd_btn vd_bg-green">Save changes</button>
                         </div>
                      </div>
-                     <!-- /.modal-content -->
+                   </form>
+                                 <!-- /.modal-content -->
                   </div>
                   <!-- /.modal-dialog -->
                </div>
@@ -1974,4 +2009,14 @@
    pickerPosition:"bottom",
    toneStyle: "bullet"
   });
+      $('.emg').emojioneArea({
+   pickerPosition:"bottom",
+   toneStyle: "bullet"
+  });
+</script>
+<script>
+    $("#icon-file2").click(function(){
+        //console.log("yes2");
+        $('#image').trigger('click');
+    });
 </script>

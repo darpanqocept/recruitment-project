@@ -815,6 +815,7 @@
 <script type="text/javascript" src="{{asset ('web/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
 <!-- Calendar -->
 <script type="text/javascript" src="{{asset ('web/plugins/moment/moment.min.js')}}"></script>
+<script src="{!! asset('web/plugins/izitoast/js/iziToast.min.js') !!}"></script>
 <script type="text/javascript" src="{{asset ('web/plugins/jquery-ui/jquery-ui.custom.min.js')}}"></script>
 <script type="text/javascript" src="{{asset ('web/plugins/fullcalendar/fullcalendar.min.js')}}"></script>
 <!-- Intro JS (Tour) -->
@@ -1505,6 +1506,30 @@
        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
    })();
 </script>
+ @if (session()->has('toastr.success'))
+            <script>
+                iziToast.success({
+                    title: '',
+                    message: '{{ session()->get("toastr.success") }}',
+                    position: 'topRight',
+                    progressBar: false,
+                    timeout: 8000,
+                });
+            </script>
+        @endif
+        @if (session()->has('toastr.error'))
+            <script>
+                iziToast.error({
+                    title: '',
+                    message: '{{ session()->get("toastr.error") }}',
+                    position: 'topRight',
+                    progressBar: false,
+                    timeout: 8000,
+                });
+
+                
+            </script>
+        @endif
 </body>
 <!-- Mirrored from www.venmond.com/demo/vendroid/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2017 07:20:57 GMT -->
 </html>

@@ -17,7 +17,7 @@ class CreateUserpostfeedTable extends Migration
         {
             Schema::create('userpostfeed', function (Blueprint $table) {
                 $table->bigIncrements('id');
-                 $table->bigInteger('userid')->index();               
+                 $table->bigInteger('user_id')->index();               
                 $table->text('description');
                 $table->string('hashtag')->nullable();
                 $table->string('usertag')->nullable();

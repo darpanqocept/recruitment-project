@@ -51,6 +51,7 @@
             <link href="{{asset('web/crm/free/plugins/daterangepicker/daterangepicker-bs3.css')}}" rel="stylesheet" type="text/css">
             <link href="{{asset('web/crm/free/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css')}}" rel="stylesheet" type="text/css">
             <link href="{{asset('web/crm/free/plugins/colorpicker/css/colorpicker.css')}}" rel="stylesheet" type="text/css">
+             <link rel="stylesheet" href="{!! asset('web/plugins/izitoast/css/iziToast.min.css') !!}">
             <!-- Specific CSS -->
             <link href="{{asset('web/crm/free/plugins/fullcalendar/fullcalendar.css')}}" rel="stylesheet" type="text/css">
             <link href="{{asset('web/plugins/fullcalendar/fullcalendar.print.css')}}" rel="stylesheet" type="text/css">
@@ -86,6 +87,8 @@
             <link href="{{asset('web/crm/free/plugins/isotope/css/isotope.css')}}" rel="stylesheet" type="text/css">
             <link href="{{asset('web/crm/free/plugins/pnotify/css/jquery.pnotify.css')}}" media="screen" rel="stylesheet" type="text/css">
             <link href="{{asset('web/crm/free/plugins/google-code-prettify/prettify.css')}}" rel="stylesheet" type="text/css">
+             <link href="{{asset ('web/plugins/dataTables/css/jquery.dataTables.min.css')}}" rel="stylesheet" type="text/css">
+            
             <link href="{{asset('web/crm/free/plugins/mCustomScrollbar/jquery.mCustomScrollbar.css')}}" rel="stylesheet" type="text/css">
             <link href="{{asset('web/crm/free/plugins/tagsInput/jquery.tagsinput.css')}}" rel="stylesheet" type="text/css">
             <link href="{{asset('web/crm/free/plugins/bootstrap-switch/bootstrap-switch.css')}}" rel="stylesheet" type="text/css">
